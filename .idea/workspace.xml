@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c776e310-32d0-49cd-95d7-9a06bde150b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/landing/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/aptitude.iml" afterPath="$PROJECT_DIR$/.idea/aptitude.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aptitude/settings.py" afterPath="$PROJECT_DIR$/aptitude/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aptitude/urls.py" afterPath="$PROJECT_DIR$/aptitude/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aptitude.iws" />
@@ -16,11 +12,12 @@
     <file path="$PROJECT_DIR$/../mysite/polls/models.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366291869551" ignored="false" />
     <file path="/models.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366291868514" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/mysite/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366723318170" ignored="false" />
-    <file path="/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366725021784" ignored="false" />
+    <file path="/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366725367461" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/polls/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366723151531" ignored="false" />
     <file path="/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366724463550" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/polls/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366723883742" ignored="false" />
     <file path="/a.dummy" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366724333373" ignored="false" />
+    <file path="/index.html" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366725329688" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +64,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="47" selection-start="409" selection-end="409" vertical-scroll-proportion="0.4520548">
+            <state line="14" column="54" selection-start="567" selection-end="567" vertical-scroll-proportion="0.5753425">
               <folding />
             </state>
           </provider>
@@ -107,6 +104,7 @@
         <option value="$PROJECT_DIR$/landing/views.py" />
         <option value="$PROJECT_DIR$/aptitude/settings.py" />
         <option value="$PROJECT_DIR$/landing/urls.py" />
+        <option value="$PROJECT_DIR$/aptitude/grundig/index.html" />
         <option value="$PROJECT_DIR$/aptitude/urls.py" />
       </list>
     </option>
@@ -375,14 +373,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="725" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25378788" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25378788" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -501,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="13" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/landing/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
@@ -517,9 +508,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="13" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="409" selection-end="409" vertical-scroll-proportion="0.4520548">
+        <state line="14" column="54" selection-start="567" selection-end="567" vertical-scroll-proportion="0.5753425">
           <folding />
         </state>
       </provider>
