@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c776e310-32d0-49cd-95d7-9a06bde150b1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aptitude/__init__.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/aptitude/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/aptitude/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/aptitude/wsgi.py" afterPath="$PROJECT_DIR$/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/templates/landing/index.html" afterPath="$PROJECT_DIR$/apps/landing/templates/landing/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aptitude/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/aptitude/settings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/aptitude/urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wsgi.py" afterPath="$PROJECT_DIR$/aptitude/wsgi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aptitude.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366722837716" ignored="false" />
+    <file path="/Dummy.txt" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366726626116" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/mysite/settings.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366292192357" ignored="false" />
-    <file path="/settings.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366724914870" ignored="false" />
+    <file path="/settings.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366726720258" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/polls/models.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366291869551" ignored="false" />
     <file path="/models.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366291868514" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/mysite/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366723318170" ignored="false" />
@@ -24,6 +23,7 @@
     <file path="$PROJECT_DIR$/../mysite/polls/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366723883742" ignored="false" />
     <file path="/a.dummy" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366724333373" ignored="false" />
     <file path="/index.html" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366726219076" ignored="false" />
+    <file path="/manage.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366726709528" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,19 +49,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.py">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="30" selection-start="4267" selection-end="4267" vertical-scroll-proportion="0.0">
+            <state line="31" column="29" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.83482945">
               <folding />
             </state>
           </provider>
@@ -70,16 +70,16 @@
       <file leaf-file-name="manage.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+            <state line="5" column="62" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urls.py">
+        <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="85" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,9 +89,7 @@
         <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,18 +118,17 @@
         <option value="$PROJECT_DIR$/aptitude/grundig/index.html" />
         <option value="$PROJECT_DIR$/aptitude/urls.py" />
         <option value="$PROJECT_DIR$/landing/urls.py" />
-        <option value="$PROJECT_DIR$/aptitude/settings.py" />
-        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/apps/landing/templates/landing/index.html" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/aptitude/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1368" />
-    <option name="height" value="725" />
+    <option name="width" value="1366" />
+    <option name="height" value="720" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -195,25 +192,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="aptitude" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aptitude" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,12 +204,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysite" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -242,33 +221,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/aptitude" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.aptitude">
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="aptitude" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,6 +246,27 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="aptitude" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -361,15 +340,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1368" height="725" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="720" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25378788" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -378,6 +356,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -439,6 +418,34 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="30" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="85" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
@@ -446,14 +453,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="150" column="40" selection-start="5275" selection-end="5275" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
+    <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
           <folding />
@@ -462,9 +469,7 @@
     </entry>
     <entry file="file:///usr/local/lib/python2.6/dist-packages/django/conf/urls/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.48833033">
-          <folding />
-        </state>
+        <state line="49" column="4" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.48833033" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
@@ -481,39 +486,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
+    <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="85" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aptitude/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.8317757">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+        <state line="5" column="62" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="30" selection-start="4267" selection-end="4267" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+        <state line="31" column="29" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.83482945">
           <folding />
         </state>
       </provider>
