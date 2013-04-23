@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -9,8 +9,7 @@ urlpatterns = patterns('',
                        # Examples:
                        # url(r'^$', 'aptitude.views.home', name='home'),
                        # url(r'^aptitude/', include('aptitude.foo.urls')),
-                       url(r'^$', 'landing.views.index', name='index'),
-                       url(r'^index/$', 'landing.views.index', name='index'),
+                       url(r'^$', include('apps.landing.urls', namespace='landing')),
 
                        # Uncomment the admin/doc line below to enable admin documentation:
                        # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
