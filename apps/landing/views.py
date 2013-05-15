@@ -1,5 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render_to_response
+from django.utils.translation import ugettext as _
 
 
 def index(request):
-    return render(request, 'landing/index.html')
+    title = _('aptitude')
+    keywords = 'aptitude, learning, child, brain'
+    description = _('slogan')
+    return render_to_response('landing/index.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                              }
+    )
