@@ -16,16 +16,16 @@
 
         <div id="templatemo_header">
 
-            <div id="site_title"><h1><a href="http://www.templatemo.com" target="_parent">{{ title }}</a></h1>
+            <div id="site_title"><h1><a href="{% url 'landing:index' %}">{{ title }}</a></h1>
             </div>
 
             <div id="templatemo_menu">
                 <ul>
-                    <li><a href="#" class="current">Home</a></li>
-                    <li><a href="about.html">Gallery</a></li>
-                    <li><a href="about.html">News</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="about.html">Contact</a></li>
+                    <li><a href="#" class="current">{{ _('Home') }}</a></li>
+                    <li><a href="">{{ _('Gallery') }}</a></li>
+                    <li><a href="">{{ _('News') }}</a></li>
+                    <li><a href="">{{ _('About') }}</a></li>
+                    <li><a href="">{{ _('Contact') }}</a></li>
                 </ul>
                 <div class="cleaner"></div>
             </div>
@@ -40,9 +40,7 @@
             </div>
             <div id="mid_right">
                 <div id="mid_title">FREE CSS TEMPLATE</div>
-                <p><a href="http://www.templatemo.com" target="_parent">templatemo.com</a> provides a lot of high
-                    quality free css templates for your personal or commercial websites. Pellentesque vitae magna. Sed
-                    nec est. Suspendisse a nibh tristique justo rhoncus volutpat.</p>
+                <p>Introductory text here</p>
                 <a class="more float_r" href="#"></a>
             </div>
         </div>
@@ -162,8 +160,7 @@
 
     <div id="copyright">
 
-        Copyright © 2048 <a href="#">Your Company Name</a> | Designed by <a href="http://www.templatemo.com"
-                                                                            target="_parent">Free CSS Templates</a>
+        Copyright © {{ year }} <a href="#">Aptitude</a>
 
     </div>
     <!-- end of templatemo_footer -->
