@@ -1,3 +1,4 @@
+from aptitude import settings
 from django.conf.urls import patterns, url, include
 
 # Uncomment the next two lines to enable the admin:
@@ -16,4 +17,7 @@ urlpatterns = patterns('',
 
                        # Uncomment the next line to enable the admin:
                        # url(r'^admin/', include(admin.site.urls)),
+
 )
+
+urlpatterns += patterns('', (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}))
