@@ -19,5 +19,13 @@ def index(request):
 
 
 def about_us(request):
-    title = _('about_us')
-    return render_to_response('landing/index.html')
+    title = _('about us')
+    return render_to_response('landing/about_us.html')
+
+def solutions(request):
+    title = _('solutions')
+    return render_to_response('landing/solutions.html')
+
+def product(request):
+    title = _('solutions')
+    return render_to_response('landing/product.html')
