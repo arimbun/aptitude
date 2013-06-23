@@ -189,7 +189,7 @@ a.more:hover {
 }
 
 #site_title h1 {
-    margin: 0;
+    margin: -10px;
     padding: 0
 }
 
@@ -291,7 +291,7 @@ a.more:hover {
     clear: both;
     width: 960px;
     padding: 40px 0 0;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.8em;
 }
 
