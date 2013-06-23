@@ -5,7 +5,7 @@ from django.utils.translation import ugettext as _
 
 def index(request):
     title = _('aptitude')
-    keywords = 'aptitude, learning, child, brain'
+    keywords = 'aptitude'
     description = _('slogan')
     year = datetime.now().year
     return render_to_response('landing/index.html',
@@ -18,14 +18,46 @@ def index(request):
     )
 
 
-def about_us(request):
-    title = _('about us')
-    return render_to_response('landing/about_us.html')
+def product(request):
+    title = _('product')
+    keywords = 'aptitude'
+    description = _('slogan')
+    year = datetime.now().year
+    return render_to_response('landing/product.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'year': year,
+                              }
+    )
+
 
 def solutions(request):
     title = _('solutions')
-    return render_to_response('landing/solutions.html')
+    keywords = 'aptitude'
+    description = _('slogan')
+    year = datetime.now().year
+    return render_to_response('landing/solutions.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'year': year,
+                              }
+    )
 
-def product(request):
-    title = _('solutions')
-    return render_to_response('landing/product.html')
+
+def consulting(request):
+    title = _('consulting')
+    keywords = 'aptitude'
+    description = _('slogan')
+    year = datetime.now().year
+    return render_to_response('landing/consulting.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'year': year,
+                              }
+    )
