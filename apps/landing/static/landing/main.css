@@ -169,7 +169,7 @@ a.more:hover {
 
 #templatemo_body_wrapper {
     width: 100%;
-    background: url(../images/templatemo_wrapper_bottom.png) repeat-x bottom
+    /*background: url(../images/templatemo_wrapper_bottom.png) repeat-x bottom*/
 }
 
 #templatemo_wrapper {
