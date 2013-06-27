@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c776e310-32d0-49cd-95d7-9a06bde150b1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach1.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach2.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach3.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/product.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/product.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/aptitude.iml" afterPath="$PROJECT_DIR$/.idea/aptitude.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/templates/landing/consulting.html" afterPath="$PROJECT_DIR$/apps/landing/templates/landing/consulting.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/templates/landing/index.html" afterPath="$PROJECT_DIR$/apps/landing/templates/landing/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/landing/main.css" afterPath="$PROJECT_DIR$/apps/landing/static/landing/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/templates/landing/product.html" afterPath="$PROJECT_DIR$/apps/landing/templates/landing/product.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/views.py" afterPath="$PROJECT_DIR$/apps/landing/views.py" />
     </list>
     <ignored path="aptitude.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +14,7 @@
     <file path="$PROJECT_DIR$/../mysite/mysite/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366723318170" ignored="false" />
     <file path="/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366725586213" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/polls/urls.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366723151531" ignored="false" />
-    <file path="/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366789875460" ignored="false" />
+    <file path="/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1372341671082" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/polls/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366789877553" ignored="false" />
     <file path="/a.dummy" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366724333373" ignored="false" />
     <file path="/index.html" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1372340884170" ignored="false" />
@@ -51,11 +41,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/landing/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="36" selection-start="878" selection-end="878" vertical-scroll-proportion="-14.4">
-              <folding />
+            <state line="12" column="30" selection-start="464" selection-end="464" vertical-scroll-proportion="0.20979021">
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,10 +55,19 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="43" selection-start="3329" selection-end="3329" vertical-scroll-proportion="-8.125">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="24" selection-start="336" selection-end="336" vertical-scroll-proportion="-4.375">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="product.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="100" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.64748204">
+            <state line="43" column="0" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-10.0">
               <folding>
                 <element signature="n#style#0;n#blockquote#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -136,11 +137,11 @@
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/aptitude/settings.py" />
-        <option value="$PROJECT_DIR$/apps/landing/views.py" />
         <option value="$PROJECT_DIR$/apps/landing/templates/landing/consulting.html" />
         <option value="$PROJECT_DIR$/apps/landing/templates/landing/index.html" />
         <option value="$PROJECT_DIR$/apps/landing/static/landing/main.css" />
         <option value="$PROJECT_DIR$/apps/landing/templates/landing/product.html" />
+        <option value="$PROJECT_DIR$/apps/landing/views.py" />
       </list>
     </option>
   </component>
@@ -486,13 +487,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" />
@@ -550,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="878" selection-end="878" vertical-scroll-proportion="-14.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/landing/static/landing/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="390" column="23" selection-start="5449" selection-end="5449" vertical-scroll-proportion="0.0">
@@ -564,19 +551,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="43" selection-start="3329" selection-end="3329" vertical-scroll-proportion="-8.125">
+        <state line="43" column="0" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-10.0">
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#blockquote#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/consulting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="74" selection-start="1300" selection-end="1344" vertical-scroll-proportion="-18.5">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,11 +567,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/product.html">
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/consulting.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="100" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.64748204">
+        <state line="33" column="74" selection-start="1300" selection-end="1344" vertical-scroll-proportion="-18.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding>
-            <element signature="n#style#0;n#blockquote#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="24" selection-start="336" selection-end="336" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="30" selection-start="464" selection-end="464" vertical-scroll-proportion="0.20979021">
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
