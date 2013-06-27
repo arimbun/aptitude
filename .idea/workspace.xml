@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c776e310-32d0-49cd-95d7-9a06bde150b1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach1.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach2.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach3.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/approach3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/images/aptitude/product.png" afterPath="$PROJECT_DIR$/apps/landing/static/images/aptitude/product.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/aptitude.iml" afterPath="$PROJECT_DIR$/.idea/aptitude.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/templates/landing/consulting.html" afterPath="$PROJECT_DIR$/apps/landing/templates/landing/consulting.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/templates/landing/index.html" afterPath="$PROJECT_DIR$/apps/landing/templates/landing/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/static/landing/main.css" afterPath="$PROJECT_DIR$/apps/landing/static/landing/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/landing/templates/landing/product.html" afterPath="$PROJECT_DIR$/apps/landing/templates/landing/product.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aptitude.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1368620575461" ignored="false" />
+    <file path="/Dummy.txt" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1372339366861" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/mysite/settings.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366292192357" ignored="false" />
     <file path="/settings.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366789515756" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/polls/models.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366291869551" ignored="false" />
@@ -17,10 +27,11 @@
     <file path="/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366789875460" ignored="false" />
     <file path="$PROJECT_DIR$/../mysite/polls/views.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366789877553" ignored="false" />
     <file path="/a.dummy" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366724333373" ignored="false" />
-    <file path="/index.html" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366726219076" ignored="false" />
+    <file path="/index.html" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1372340884170" ignored="false" />
     <file path="/manage.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366726709528" ignored="false" />
-    <file path="$PROJECT_DIR$/apps/landing/tests.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366795518609" ignored="false" />
-    <file path="$PROJECT_DIR$/apps/landing/__init__.py" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1366795518609" ignored="false" />
+    <file path="/consulting.html" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1372340163224" ignored="false" />
+    <file path="/main.css" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1372340905475" ignored="false" />
+    <file path="/product.html" changelist="c776e310-32d0-49cd-95d7-9a06bde150b1" time="1372341143635" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +46,15 @@
     <disable_hints />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="aptitude" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/landing/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="22" selection-start="80" selection-end="80" vertical-scroll-proportion="0.10771993">
+            <state line="27" column="36" selection-start="878" selection-end="878" vertical-scroll-proportion="-14.4">
               <folding />
             </state>
           </provider>
@@ -49,43 +63,47 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+            <state line="64" column="43" selection-start="3329" selection-end="3329" vertical-scroll-proportion="-8.125">
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consulting.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/consulting.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="74" selection-start="1300" selection-end="1344" vertical-scroll-proportion="-18.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
+      <file leaf-file-name="solutions.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/solutions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="30" selection-start="4286" selection-end="4286" vertical-scroll-proportion="0.0">
+            <state line="13" column="24" selection-start="387" selection-end="387" vertical-scroll-proportion="-8.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
+      <file leaf-file-name="product.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="63" column="100" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.64748204">
+              <folding>
+                <element signature="n#style#0;n#blockquote#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/landing/static/landing/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+            <state line="390" column="23" selection-start="5449" selection-end="5449" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,18 +134,21 @@
         <option value="$PROJECT_DIR$/aptitude/urls.py" />
         <option value="$PROJECT_DIR$/landing/urls.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/apps/landing/templates/landing/index.html" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/aptitude/settings.py" />
         <option value="$PROJECT_DIR$/apps/landing/views.py" />
+        <option value="$PROJECT_DIR$/apps/landing/templates/landing/consulting.html" />
+        <option value="$PROJECT_DIR$/apps/landing/templates/landing/index.html" />
+        <option value="$PROJECT_DIR$/apps/landing/static/landing/main.css" />
+        <option value="$PROJECT_DIR$/apps/landing/templates/landing/product.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="1919" />
     <option name="y" value="24" />
-    <option name="width" value="1368" />
-    <option name="height" value="725" />
+    <option name="width" value="1922" />
+    <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -150,8 +171,8 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
       <sortByType />
     </navigator>
     <panes>
@@ -162,33 +183,11 @@
               <option name="myItemId" value="aptitude" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.6.5 (/usr/bin/python2.6) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="aptitude" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aptitude" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aptitude" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aptitude" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="aptitude" />
@@ -209,6 +208,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aptitude" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aptitude" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aptitude" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aptitude" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -218,7 +261,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../templatemo_275_connection" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -247,6 +290,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="aptitude" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
@@ -270,6 +315,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="aptitude" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
@@ -289,6 +336,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="aptitude" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
@@ -309,6 +358,8 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="aptitude" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
@@ -326,7 +377,7 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -336,7 +387,6 @@
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
     <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="DETECT_NESTED_COPIES" value="true" />
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
@@ -353,14 +403,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1368" height="725" extended-state="6" />
+    <frame x="1919" y="24" width="1922" height="1033" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26136363" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26414087" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -401,7 +451,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -411,6 +461,10 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -424,6 +478,7 @@
     <option name="ACTIVE_VCS_NAME" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
@@ -431,27 +486,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="30" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aptitude/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="85" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
@@ -478,11 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.6/dist-packages/django/conf/urls/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.48833033" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" />
@@ -493,23 +522,9 @@
         <state line="32" column="0" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.8317757" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
+    <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="30" selection-start="4286" selection-end="4286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0">
+        <state line="12" column="1" selection-start="549" selection-end="549" vertical-scroll-proportion="0.19807923">
           <folding />
         </state>
       </provider>
@@ -521,17 +536,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/landing/urls.py">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.17482518">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aptitude/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="30" selection-start="4268" selection-end="4268" vertical-scroll-proportion="0.09090909">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/landing/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="80" selection-end="80" vertical-scroll-proportion="0.10771993">
+        <state line="27" column="36" selection-start="878" selection-end="878" vertical-scroll-proportion="-14.4">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/static/landing/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="390" column="23" selection-start="5449" selection-end="5449" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="43" selection-start="3329" selection-end="3329" vertical-scroll-proportion="-8.125">
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/consulting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="74" selection-start="1300" selection-end="1344" vertical-scroll-proportion="-18.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/solutions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="387" selection-end="387" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/landing/templates/landing/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="100" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.64748204">
+          <folding>
+            <element signature="n#style#0;n#blockquote#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

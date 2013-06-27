@@ -417,3 +417,7 @@ a.more:hover {
 #copyright a {
     color: #fff
 }
+
+table#challenges td {
+    padding: 10px;
+}
