@@ -418,6 +418,10 @@ a.more:hover {
     color: #fff
 }
 
-table#challenges td {
+table {
+    margin: 20px 0 20px 0;
+}
+
+table td {
     padding: 10px;
 }
