@@ -365,7 +365,7 @@ a.more:hover {
 
 #templatemo_footer {
     width: 960px;
-    height: 70px;
+    height: 60px;
     padding: 20px 0 0;
     margin: 0 auto;
     color: #BABABA;
@@ -408,7 +408,7 @@ a.more:hover {
 #copyright {
     clear: both;
     width: 960px;
-    height: 40px;
+    height: 60px;
     margin: 0 auto;
     text-align: center;
     color: #bababa;
@@ -429,6 +429,17 @@ table td {
 img#facebook {
     width: 45px;
     height: 45px;
+    background: url(../images/aptitude/idroid.png) -75px 0;
+}
+
+img#twitter {
+    width: 45px;
+    height: 45px;
+    background: url(../images/aptitude/idroid.png) -148px 0;
+}
+
+img#email {
+    width: 45px;
+    height: 45px;
     background: url(../images/aptitude/idroid.png) 0 0;
-    /*background: url(../images/aptitude/idroid.png) 0px 0px;*/
 }

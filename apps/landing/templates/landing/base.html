@@ -16,18 +16,25 @@
 <div id="templatemo_footer_wrapper">
     <div id="templatemo_footer">
 
-        <div class="footer_title">
-            <img id="facebook" src="{% static 'images/aptitude/trans.png' %}" alt="facebook"/>
-            <img src="../../static/images/mail.png" alt="icons"/>
-            {#            Tel: 010-010-1234 | Fax: 020-020-5678#}
-        </div>
+        <div class="footer_title" style="position: absolute; left: 585px">
+            <a href="">
+                <img id="facebook" src="{% static 'images/aptitude/trans.png' %}" alt="facebook"/>
+            </a>
+            <a href="">
+                <img id="twitter" src="{% static 'images/aptitude/trans.png' %}" alt="twitter"/>
+            </a>
+            <a href="mailto:info@aptitudeworld.com.au">
+                <img id="email" src="{% static 'images/aptitude/trans.png' %}" alt="email"/>
+            </a>
 
+        </div>
 
         <div class="cleaner"></div>
     </div>
     <!-- end of footer -->
 
     <div id="copyright">
+        Tel: 010-010-1234 | Fax: 020-020-5678<br/>
         Copyright © {{ year }} Aptitude World
     </div>
     <!-- end of templatemo_footer -->
