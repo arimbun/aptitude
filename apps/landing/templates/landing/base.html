@@ -6,17 +6,56 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>{{ title }}</title>
     <meta name="keywords" content="{{ keywords }}"/>
-    <meta name="description" content="{{ descriptions }}"/>
+    <meta name="description" content="{{ description }}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'landing/main.css' %}"/>
 </head>
 
 <body>
+
+<div id="templatemo_body_wrapper">
+    <div id="templatemo_wrapper">
+        <div id="templatemo_header">
+
+            <div id="site_title"><h1><a href="{% url 'landing:index' %}">{{ title }}</a></h1>
+            </div>
+
+            <div id="templatemo_menu">
+                <ul>
+                    <li>
+                        <a {% if page == 'solutions' %} class="current" {% endif %}
+                                                        href="{% url 'landing:solutions' %}">{{ _('Solutions') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a {% if page == 'consulting' %} class="current" {% endif %}
+                                                         href="{% url 'landing:consulting' %}">{{ _('Consulting') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a {% if page == 'product' %} class="current" {% endif %}
+                                                      href="{% url 'landing:product' %}">{{ _('Product') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a {% if page == 'index' %} class="current" {% endif %}
+                                                    href="{% url 'landing:index' %}">{{ _('Home') }}
+                        </a>
+                    </li>
+                </ul>
+                <div class="cleaner"></div>
+            </div>
+
+            <div class="cleaner"></div>
+        </div>
+    </div>
+</div>
+
 {% block content %}{% endblock %}
 
 <div id="templatemo_footer_wrapper">
     <div id="templatemo_footer">
 
-        <div class="footer_title" style="position: absolute; left: 585px">
+        <div class="footer_title" style="position: relative; left: 393px">
             <a href="">
                 <img id="facebook" src="{% static 'images/aptitude/trans.png' %}" alt="facebook"/>
             </a>
@@ -26,7 +65,6 @@
             <a href="mailto:info@aptitudeworld.com.au">
                 <img id="email" src="{% static 'images/aptitude/trans.png' %}" alt="email"/>
             </a>
-
         </div>
 
         <div class="cleaner"></div>
