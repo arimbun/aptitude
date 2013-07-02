@@ -1,0 +1,31 @@
+{% extends 'landing/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div id="templatemo_body_wrapper">
+        <div id="templatemo_wrapper">
+            <div id="templatemo_main">
+
+                <div class="col_w960">
+                    <form action="/book" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit"/>
+                    </form>
+                    <div class="cleaner"></div>
+                </div>
+                <!-- end of templatemo fp services -->
+
+                <div class="col_w960 col_w960_last"></div>
+                <div class="cleaner"></div>
+            </div>
+            <!-- end of main -->
+
+            <div class="cleaner"></div>
+        </div>
+        <!-- end of wrapper -->
+        <div class="cleaner"></div>
+    </div>
+    <!-- end of body wrapper -->
+{% endblock %}
+

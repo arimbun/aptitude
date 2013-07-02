@@ -1,15 +1,25 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
+from django.http import HttpResponseRedirect
+from django import forms
 
 COMPANY_NAME = 'Aptitude World ANZ'
 META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Australia', 'Aptitude World New Zealand']
 
 
+class BookingForm(forms.Form):
+    first_name = forms.CharField(max_length=100)
+    last_name = forms.CharField(max_length=100)
+    phone_number = forms.CharField(max_length=100)
+    postcode = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    cc_myself = forms.BooleanField(required=False)
+    message_to_our_consultant = forms.Textarea()
+
+
 def index(request):
+    keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Home'
-    keywords = ','.join(META_KEYWORDS)
-    description = ','.join(META_KEYWORDS)
-    year = datetime.now().year
     return render_to_response('landing/index.html',
                               {
                                   'title': title,
@@ -22,10 +32,8 @@ def index(request):
 
 
 def product(request):
+    keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Product'
-    keywords = ','.join(META_KEYWORDS)
-    description = ','.join(META_KEYWORDS)
-    year = datetime.now().year
     return render_to_response('landing/product.html',
                               {
                                   'title': title,
@@ -38,10 +46,8 @@ def product(request):
 
 
 def solutions(request):
+    keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Solutions'
-    keywords = ','.join(META_KEYWORDS)
-    description = ','.join(META_KEYWORDS)
-    year = datetime.now().year
     return render_to_response('landing/solutions.html',
                               {
                                   'title': title,
@@ -54,10 +60,8 @@ def solutions(request):
 
 
 def consulting(request):
+    keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Consulting'
-    keywords = ','.join(META_KEYWORDS)
-    description = ','.join(META_KEYWORDS)
-    year = datetime.now().year
     return render_to_response('landing/consulting.html',
                               {
                                   'title': title,
@@ -67,3 +71,32 @@ def consulting(request):
                                   'year': year,
                               }
     )
+
+
+def book(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect('/index')
+    else:
+        form = BookingForm()
+
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Book an Appointment'
+    return render(request, 'landing/book.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'book',
+                                  'year': year,
+                                  'form': form,
+                              }
+    )
+
+
+def __init():
+    keywords = ','.join(META_KEYWORDS)
+    description = ','.join(META_KEYWORDS)
+    year = datetime.now().year
+    return keywords, description, year

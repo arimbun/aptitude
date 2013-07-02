@@ -10,4 +10,6 @@ urlpatterns = patterns('',
                        url(r'^product$', views.product, name='product'),
                        # eg: /consulting
                        url(r'^consulting$', views.consulting, name='consulting'),
+                       # eg: /book
+                       url(r'^book', views.book, name='book'),
 )
