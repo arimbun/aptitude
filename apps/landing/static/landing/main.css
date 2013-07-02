@@ -189,7 +189,7 @@ a.more:hover {
 }
 
 #site_title h1 {
-    margin: -10px;
+    margin-top: -20px;
     padding: 0
 }
 
@@ -199,7 +199,7 @@ a.more:hover {
     height: 97px;
     color: #fff;
     text-indent: -10000px;
-    background: url(../images/templatemo_logo.png) no-repeat
+    background: url(../images/aptitude/logo-only-small.png) no-repeat
 }
 
 /* menu */
@@ -365,10 +365,10 @@ a.more:hover {
 
 #templatemo_footer {
     width: 960px;
-    height: 195px;
+    height: 60px;
     padding: 20px 0 0;
     margin: 0 auto;
-    color: #545454;
+    color: #BABABA;
 }
 
 .footer_title {
@@ -408,10 +408,10 @@ a.more:hover {
 #copyright {
     clear: both;
     width: 960px;
-    height: 40px;
+    height: 60px;
     margin: 0 auto;
     text-align: center;
-    color: #9a9a9a;
+    color: #bababa;
 }
 
 #copyright a {
@@ -424,4 +424,22 @@ table {
 
 table td {
     padding: 10px;
+}
+
+img#facebook {
+    width: 45px;
+    height: 45px;
+    background: url(../images/aptitude/idroid.png) -75px 0;
+}
+
+img#twitter {
+    width: 45px;
+    height: 45px;
+    background: url(../images/aptitude/idroid.png) -148px 0;
+}
+
+img#email {
+    width: 45px;
+    height: 45px;
+    background: url(../images/aptitude/idroid.png) 0 0;
 }
