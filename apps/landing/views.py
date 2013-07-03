@@ -1,6 +1,6 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
-from django.http import HttpResponseRedirect
 from django import forms
 
 COMPANY_NAME = 'Aptitude World ANZ'
@@ -11,9 +11,9 @@ class BookingForm(forms.Form):
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
     phone_number = forms.CharField(max_length=100)
-    postcode = forms.CharField(max_length=100)
     email = forms.EmailField()
-    cc_myself = forms.BooleanField(required=False)
+    country = forms.ChoiceField()
+    postcode = forms.CharField(max_length=100)
     message_to_our_consultant = forms.Textarea()
 
 
@@ -84,14 +84,14 @@ def book(request):
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Book an Appointment'
     return render(request, 'landing/book.html',
-                              {
-                                  'title': title,
-                                  'keywords': keywords,
-                                  'description': description,
-                                  'page': 'book',
-                                  'year': year,
-                                  'form': form,
-                              }
+                  {
+                      'title': title,
+                      'keywords': keywords,
+                      'description': description,
+                      'page': 'book',
+                      'year': year,
+                      'form': form,
+                  }
     )
 
 
