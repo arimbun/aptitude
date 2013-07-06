@@ -7,8 +7,15 @@
     <title>{{ title }}</title>
     <meta name="keywords" content="{{ keywords }}"/>
     <meta name="description" content="{{ description }}"/>
-    <link rel="icon" type="image/png" href="{% static 'images/aptitude/favicon.ico' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'landing/main.css' %}"/>
+    <link rel="icon" type="image/png" href="{% static 'landing/img/aptitude/favicon.ico' %}"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/main.css' %}"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+{#            alert('moo');#}
+        });
+    </script>
 </head>
 
 <body>
@@ -63,13 +70,13 @@
 
         <div class="footer_title" style="position: relative; left: 393px">
             <a href="">
-                <img id="facebook" src="{% static 'images/aptitude/trans.png' %}" alt="facebook"/>
+                <img id="facebook" src="{% static 'landing/img/aptitude/trans.png' %}" alt="facebook"/>
             </a>
             <a href="">
-                <img id="twitter" src="{% static 'images/aptitude/trans.png' %}" alt="twitter"/>
+                <img id="twitter" src="{% static 'landing/img/aptitude/trans.png' %}" alt="twitter"/>
             </a>
             <a href="mailto:info@aptitudeworld.com.au?cc=fenty@aptitudeworld.com.au">
-                <img id="email" src="{% static 'images/aptitude/trans.png' %}" alt="email"/>
+                <img id="email" src="{% static 'landing/img/aptitude/trans.png' %}" alt="email"/>
             </a>
         </div>
 

@@ -10,7 +10,7 @@ body {
     font-size: 13px;
     line-height: 1.8em;
     background-color: #ffffff;
-    background-image: url(../images/templatemo_body1.jpg);
+    background-image: url(../img/templatemo_body1.jpg);
     background-repeat: repeat-x;
     background-position: top
 }
@@ -120,7 +120,7 @@ a.more {
     text-align: center;
     color: #333;
     font-weight: 700;
-    background: url(../images/templatemo_readmore.png) no-repeat
+    background: url(../img/templatemo_readmore.png) no-repeat
 }
 
 a.more:hover {
@@ -162,14 +162,14 @@ a.more:hover {
 .tmo_list li {
     margin: 0;
     padding: 0 0 0 30px;
-    background: url(../images/templatemo_list.png) no-repeat scroll 0 7px
+    background: url(../img/templatemo_list.png) no-repeat scroll 0 7px
 }
 
 /* ------------------ */
 
 #templatemo_body_wrapper {
     width: 100%;
-    /*background: url(../images/templatemo_wrapper_bottom.png) repeat-x bottom*/
+    /*background: url(../img/templatemo_wrapper_bottom.png) repeat-x bottom*/
 }
 
 #templatemo_wrapper {
@@ -199,7 +199,7 @@ a.more:hover {
     height: 97px;
     color: #fff;
     text-indent: -10000px;
-    background: url(../images/aptitude/logo-only-small.png) no-repeat
+    background: url(../img/aptitude/logo-only-small.png) no-repeat
 }
 
 /* menu */
@@ -238,7 +238,7 @@ a.more:hover {
 
 #templatemo_menu ul li a:hover, #templatemo_menu ul li .current {
     color: #000;
-    background: url(../images/templatemo_menu_hover.png) bottom center no-repeat
+    background: url(../img/templatemo_menu_hover.png) bottom center no-repeat
 }
 
 /* end of menu */
@@ -263,7 +263,7 @@ a.more:hover {
     height: 230px;
     top: 0;
     left: 0;
-    background: url(../images/templatemo_image_frame.png) no-repeat
+    background: url(../img/templatemo_image_frame.png) no-repeat
 }
 
 #mid_img_wrap img {
@@ -360,7 +360,7 @@ a.more:hover {
 #templatemo_footer_wrapper {
     clear: both;
     width: 100%;
-    background: url(../images/templatemo_footer.jpg) repeat-x
+    background: url(../img/templatemo_footer.jpg) repeat-x
 }
 
 #templatemo_footer {
@@ -429,19 +429,19 @@ table td {
 img#facebook {
     width: 45px;
     height: 45px;
-    background: url(../images/aptitude/idroid.png) -75px 0;
+    background: url(../img/aptitude/idroid.png) -75px 0;
 }
 
 img#twitter {
     width: 45px;
     height: 45px;
-    background: url(../images/aptitude/idroid.png) -148px 0;
+    background: url(../img/aptitude/idroid.png) -148px 0;
 }
 
 img#email {
     width: 45px;
     height: 45px;
-    background: url(../images/aptitude/idroid.png) 0 0;
+    background: url(../img/aptitude/idroid.png) 0 0;
 }
 
 blockquote {
