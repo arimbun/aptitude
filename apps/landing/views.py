@@ -1,3 +1,4 @@
+import sys
 from apps.countries.models import Country
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponseRedirect, HttpResponse
@@ -79,9 +80,16 @@ def book(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            reference_number = None
-            send_confirmation_email(reference_number)
-            return HttpResponseRedirect('/index')
+            # reference_number = request.POST.get('reference')
+            reference_number = '123'
+            send_confirmation_email(
+                first_name=request.POST.get('first_name'),
+                last_name=request.POST.get('last_name'),
+                contact_number=request.POST.get('contact_number'),
+                email_from='info@aptitudeworld.com.au',
+                email_to=[request.POST.get('email')],
+                reference_number=reference_number)
+            return HttpResponseRedirect('/')
     else:
         form = BookingForm()
 
@@ -99,10 +107,30 @@ def book(request):
     )
 
 
-def send_confirmation_email(email_to, reference_number):
+def send_confirmation_email(first_name, last_name, contact_number, email_from, email_to, reference_number):
     title = 'Aptitude Assessment Booking Confirmation %s' % reference_number
-    message = None
-    email_from = 'info@aptitudeworld.com.au'
+    full_name = '%s %s' % (first_name, last_name)
+    message = """
+    Thank you for booking your aptitude assessment online. We look forward to helping you unveil your potentials. Below are the details for your booking.
+
+    Booking reference number: %s
+    Name: %s
+    Contact Number: %s
+    Email Address: %s
+    Data scanning appointment: %s
+    Total Price: %s
+    Deposit Paid: %s
+    Total Owing: %s
+
+    Please find attached our booking terms & conditions for your reference.
+
+    Kind Regards,
+    Aptitude World
+    Ph 1300 88 78 71
+    info@aptitudeworld.com.au
+    """ % (reference_number, full_name, contact_number, email_to, 'Saturday 6 April 2013, 1:00 PM', '$275 inc GST',
+           '$100', '$175')
+
     try:
         send_mail(title, message, email_from, email_to, fail_silently=False)
     except BadHeaderError:
