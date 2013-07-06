@@ -24,6 +24,11 @@
                 <ul>
                     <li>
                         <a {% if page == 'solutions' %} class="current" {% endif %}
+                                                        href="{% url 'landing:book' %}">{{ _('Book') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a {% if page == 'solutions' %} class="current" {% endif %}
                                                         href="{% url 'landing:solutions' %}">{{ _('Solutions') }}
                         </a>
                     </li>
