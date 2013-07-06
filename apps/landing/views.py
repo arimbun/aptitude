@@ -1,4 +1,6 @@
-from django.http import HttpResponseRedirect
+from apps.countries.models import Country
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
 from django import forms
@@ -10,11 +12,11 @@ META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Austr
 class BookingForm(forms.Form):
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
-    phone_number = forms.CharField(max_length=100)
+    contact_number = forms.CharField(max_length=100)
     email = forms.EmailField()
-    country = forms.ChoiceField()
+    country = forms.ModelChoiceField(queryset=Country.objects.all())
     postcode = forms.CharField(max_length=100)
-    message_to_our_consultant = forms.Textarea()
+    message = forms.CharField(widget=forms.Textarea)
 
 
 def index(request):
@@ -77,6 +79,8 @@ def book(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
+            reference_number = None
+            send_confirmation_email(reference_number)
             return HttpResponseRedirect('/index')
     else:
         form = BookingForm()
@@ -93,6 +97,16 @@ def book(request):
                       'form': form,
                   }
     )
+
+
+def send_confirmation_email(email_to, reference_number):
+    title = 'Aptitude Assessment Booking Confirmation %s' % reference_number
+    message = None
+    email_from = 'info@aptitudeworld.com.au'
+    try:
+        send_mail(title, message, email_from, email_to, fail_silently=False)
+    except BadHeaderError:
+        return HttpResponse('Invalid header found.')
 
 
 def __init():
