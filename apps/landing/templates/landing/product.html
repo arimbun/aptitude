@@ -2,6 +2,59 @@
 {% load staticfiles %}
 
 {% block content %}
+    <div class="overlay" id="fingerprints">
+        <div class="details">
+            <table>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_1.png' %}"></td>
+                    <td><b>Simple Arch</b> - Practical, realistic, efficient but conservative</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_2.png' %}"></td>
+                    <td><b>Ulnar Loop</b> - Emotional, adapts fast and strong in interaction</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_3.png' %}"></td>
+                    <td><b>Concentric Whirl</b> - Independent, competitive, firm (stubborn) and proactive</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_4.png' %}"></td>
+                    <td><b>Spiral Whirl</b> - Highly intuitive, goal oriented but stubborn</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_5.png' %}"></td>
+                    <td><b>Double Loop</b> - Can be a multi-tasking person and highly imitative in learning</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_6.png' %}"></td>
+                    <td><b>Tented Arch</b> - Passionate and impulsive, able to absorb information like a sponge</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_7.png' %}"></td>
+                    <td><b>Radial Loop</b> - Self-centered, unconventional and has reverse-thinking model</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_8.png' %}"></td>
+                    <td><b>Imploding Whirl</b> - Family oriented but low in concentration and focus</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'landing/img/aptitude/fingerprint_type_9.png' %}"></td>
+                    <td><b>Peacock's Eye</b> - High degree of understanding ability, optimistic, enthusiastic and have
+                        unique ability in arts
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="overlay" id="patent_transcripts">
+        <div class="details">
+            <img src="{% static 'landing/img/aptitude/patent1.png' %}">
+            <img src="{% static 'landing/img/aptitude/patent2.png' %}">
+        </div>
+    </div>
+
+
     <div id="templatemo_body_wrapper">
         <div id="templatemo_wrapper">
             <div id="templatemo_main">
@@ -32,7 +85,7 @@
                     </p>
 
                     <p>
-                        Brain-Child Learning has the latest version of Dermatoglyphics technology with
+                        Aptitude World ANZ has the latest version of Dermatoglyphics technology with
                         accuracy up to 95% to decode one’s innate ability and talent.
                     </p>
 
@@ -46,11 +99,13 @@
                         &mdash; Dermatoglyphics Consultant
                     </blockquote>
 
+
                     <table>
                         <tr>
                             <td><img src="{% static 'landing/img/aptitude/fingerprint1.png' %}"></td>
                             <td>
-                                The types of <a href="#">fingerprints</a> and <a href="#">transcripts of USA patent</a>
+                                The types of <a href="" rel="#fingerprints">fingerprints</a> and
+                                <a href="" rel="#patent_transcripts">transcripts of USA patent</a>
                             </td>
                         </tr>
                     </table>

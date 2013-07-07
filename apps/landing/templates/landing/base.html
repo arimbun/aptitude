@@ -7,15 +7,17 @@
     <title>{{ title }}</title>
     <meta name="keywords" content="{{ keywords }}"/>
     <meta name="description" content="{{ description }}"/>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="{% static 'landing/img/aptitude/favicon.ico' %}"/>
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="{% static 'landing/css/main.css' %}"/>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-{#            alert('moo');#}
-        });
-    </script>
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="{% static 'landing/js/main.js' %}"></script>
 </head>
 
 <body>
