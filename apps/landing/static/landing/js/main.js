@@ -10,4 +10,7 @@ $(document).ready(function () {
     $('a[rel]').overlay({
         fixed: false
     });
+
+    $.noConflict();
+    $('#id_appointment_date').datepicker();
 });

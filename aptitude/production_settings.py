@@ -10,7 +10,6 @@ ADMINS = (
     ('Arthur Rimbun', 'anggiarto@gmail.com'),
 )
 
-
 MANAGERS = ADMINS
 
 # Parse database configuration from $DATABASE_URL

@@ -13,9 +13,11 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="{% static 'landing/css/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 
     <!-- Javascripts -->
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script type="text/javascript" src="//cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
     <script type="text/javascript" src="{% static 'landing/js/main.js' %}"></script>
 </head>
@@ -33,7 +35,7 @@
                 <ul>
                     <li>
                         <a {% if page == 'book' %} class="current" {% endif %}
-                                                        href="{% url 'landing:book' %}">{{ _('Book') }}
+                                                   href="{% url 'landing:book' %}">{{ _('Book') }}
                         </a>
                     </li>
                     <li>

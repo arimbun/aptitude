@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
 from django import forms
+import os
 
 COMPANY_NAME = 'Aptitude World ANZ'
 META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Australia', 'Aptitude World New Zealand']
@@ -16,6 +17,7 @@ class BookingForm(forms.Form):
     email = forms.EmailField()
     country = forms.ModelChoiceField(queryset=Country.objects.all())
     postcode = forms.CharField(max_length=100)
+    appointment_date = forms.DateField()
     message = forms.CharField(widget=forms.Textarea)
 
 
@@ -78,15 +80,21 @@ def consulting(request):
 def book(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
+
+        if os.environ['ENVIRONMENT'] == 'production':
+            email_to = form.cleaned_data['email']
+        else:
+            email_to = 'anggiarto@gmail.com'
+
         if form.is_valid():
             # reference_number = request.POST.get('reference')
             reference_number = '123'
             Landing.send_confirmation_email(
-                first_name=request.POST.get('first_name'),
-                last_name=request.POST.get('last_name'),
-                contact_number=request.POST.get('contact_number'),
+                first_name=form.cleaned_data['first_name'],
+                last_name=form.cleaned_data['last_name'],
+                contact_number=form.cleaned_data['contact_number'],
                 email_from='info@aptitudeworld.com.au',
-                email_to=[request.POST.get('email')],
+                email_to=[email_to],
                 reference_number=reference_number)
             return HttpResponseRedirect('/')
     else:
