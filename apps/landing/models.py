@@ -76,7 +76,9 @@ class Landing(models.Model):
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
 
-    def generate_booking_reference_number(self):
+    def generate_booking_reference_number(self, first_name, last_name):
+        initials = str(first_name)[:1].upper() + str(last_name)[:1].upper()
+
         return 1
 
     def format_date(self, date):

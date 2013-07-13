@@ -84,16 +84,15 @@ def book(request):
         form = BookingForm(request.POST)
 
         if form.is_valid():
-            if settings.ENVIRONMENT == 'production':
-                email_to = ['info@aptitudeworld.com.au', form.cleaned_data['email_address']]
-            else:
-                email_to = ['mocking@jay.com']
+            email_to = ['info@aptitudeworld.com.au', form.cleaned_data['email_address']]
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name'],
 
             landing = Landing()
-            reference_number = landing.generate_booking_reference_number()
+            reference_number = landing.generate_booking_reference_number(first_name, last_name)
             landing.send_confirmation_email(
-                first_name=form.cleaned_data['first_name'],
-                last_name=form.cleaned_data['last_name'],
+                first_name=first_name,
+                last_name=last_name,
                 contact_number=form.cleaned_data['contact_number'],
                 email_from='info@aptitudeworld.com.au',
                 email_to=email_to,
