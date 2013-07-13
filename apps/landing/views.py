@@ -18,8 +18,8 @@ class BookingForm(forms.Form):
     contact_number = forms.CharField(max_length=100)
     country = forms.ModelChoiceField(queryset=Country.objects.all())
     postcode = forms.CharField(max_length=100)
+    booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
     appointment_date = forms.DateField(input_formats=['%d/%m/%Y'])
-    booking_types = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
     message = forms.CharField(widget=forms.Textarea)
 
 
@@ -85,20 +85,25 @@ def book(request):
 
         if form.is_valid():
             if settings.ENVIRONMENT == 'production':
-                email_to = form.cleaned_data['email_address']
+                email_to = ['info@aptitudeworld.com.au', form.cleaned_data['email_address']]
             else:
-                email_to = 'anggiarto@gmail.com'
+                email_to = ['mocking@jay.com']
 
-            # reference_number = request.POST.get('reference')
-            reference_number = '123'
             landing = Landing()
+            reference_number = landing.generate_booking_reference_number()
             landing.send_confirmation_email(
                 first_name=form.cleaned_data['first_name'],
                 last_name=form.cleaned_data['last_name'],
                 contact_number=form.cleaned_data['contact_number'],
                 email_from='info@aptitudeworld.com.au',
-                email_to=[email_to],
-                reference_number=reference_number)
+                email_to=email_to,
+                reference_number=reference_number,
+                message=form.cleaned_data['message'],
+                country=form.cleaned_data['country'],
+                postcode=form.cleaned_data['postcode'],
+                appointment_date=form.cleaned_data['appointment_date'],
+                total_price=5,
+                deposit_paid=3)
             return HttpResponseRedirect('/')
     else:
         form = BookingForm()

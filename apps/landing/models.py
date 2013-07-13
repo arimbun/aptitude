@@ -1,10 +1,12 @@
+from datetime import datetime
 from django.core.mail import send_mail, BadHeaderError
 from django.db import models
 from django.http import HttpResponse
 
 
 class Landing(models.Model):
-    def send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number):
+    def send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
+                                message, country, postcode, appointment_date, total_price, deposit_paid):
         """
         Sends a booking confirmation email to the customer.
         :param first_name: Customer's first name
@@ -24,10 +26,13 @@ class Landing(models.Model):
         Name: %s
         Contact Number: %s
         Email Address: %s
-        Data scanning appointment: %s
+        Country: %s
+        Postcode: %s
+        Data scanning appointment: %s (A consultant will contact you to advise of the appointment time)
         Total Price: %s
         Deposit Paid: %s
         Total Owing: %s
+        Message to consultant: %s
 
         Please find our booking terms & conditions below for your reference.
 
@@ -61,8 +66,10 @@ class Landing(models.Model):
         Aptitude World
         Ph 1300 88 78 71
         info@aptitudeworld.com.au
-        """ % (reference_number, full_name, contact_number, email_to, 'Saturday 6 April 2013, 1:00 PM', '$275 inc GST',
-               '$100', '$175')
+        """ % (
+            reference_number, full_name, contact_number, ', '.join(email_to), country, postcode,
+            self.format_date(appointment_date), self.format_price(total_price), self.format_price(deposit_paid),
+            self.format_price(total_price - deposit_paid), message)
 
         try:
             send_mail(title, message, email_from, email_to, fail_silently=False)
@@ -71,3 +78,19 @@ class Landing(models.Model):
 
     def generate_booking_reference_number(self):
         return 1
+
+    def format_date(self, date):
+        # parse date
+        # day, month, year = self.__parse_date(date)
+        # dateobj = datetime(year, month, day)
+        return date.strftime('%A, %d %B %Y')
+
+    def format_price(self, price):
+        return str(price) + ' inc. GST'
+
+    def __parse_date(self, date):
+        date_arr = date.split('/')
+        day = date_arr[0]
+        month = date_arr[1]
+        year = date_arr[2]
+        return day, month, year
