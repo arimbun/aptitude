@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 class Landing(models.Model):
-    def send_confirmation_email(first_name, last_name, contact_number, email_from, email_to, reference_number):
+    def send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number):
         """
         Sends a booking confirmation email to the customer.
         :param first_name: Customer's first name
@@ -29,7 +29,33 @@ class Landing(models.Model):
         Deposit Paid: %s
         Total Owing: %s
 
-        Please find attached our booking terms & conditions for your reference.
+        Please find our booking terms & conditions below for your reference.
+
+        -------------------
+
+        Terms and Conditions:
+
+        Payment of balance
+        The outstanding balance is payable by the data scanning appointment time. We offer the following payment options:
+        1. Payment by direct bank transfer (preferred)
+            Account Name:               Aptitude World
+            BSB:                        032 257
+            Account number:             391306
+
+            NOTE: Payments must include the booking reference number and surname
+        2. Payment by cash at the data scanning appointment (please provide the exact amount)
+        3. Payment by credit card via our website.
+
+        Cancellation
+        Should you have to cancel your assessment, you must notify us at least 24 hour in advance. The deposit is not refundable but transferrable once only. Once biometric data is taken, no cancellation of service can be made.
+
+        Confidentiality
+        Your personal data is treated with utmost privacy and confidentiality. Once the aptitude report is generated, the biometric data is automatically deleted from the system. We will not use any personal data without your prior consent.
+
+        Disclaimer
+        The undersigned has understood the nature of the service, agreed to subscribe to the said service and its consultation. Aptitude World does not make any representation, statement or remark to the undersigned on what the customer will or will not do based on the aptitude analysis. The analysis does not predict what the future holds. Aptitude World shall take its commitment in providing its service to the customer and no discrepancies shall be arised by either party after the consultation.
+
+        -------------------
 
         Kind Regards,
         Aptitude World
@@ -42,3 +68,6 @@ class Landing(models.Model):
             send_mail(title, message, email_from, email_to, fail_silently=False)
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
+
+    def generate_booking_reference_number(self):
+        return 1

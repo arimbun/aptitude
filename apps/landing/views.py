@@ -1,23 +1,23 @@
 from apps.countries.models import Country
 from apps.landing.models import Landing
+from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
 from django import forms
-import os
 
 COMPANY_NAME = 'Aptitude World ANZ'
 META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Australia', 'Aptitude World New Zealand']
 
 
 class BookingForm(forms.Form):
+    email_address = forms.EmailField()
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
     contact_number = forms.CharField(max_length=100)
-    email = forms.EmailField()
     country = forms.ModelChoiceField(queryset=Country.objects.all())
     postcode = forms.CharField(max_length=100)
-    appointment_date = forms.DateField()
+    appointment_date = forms.DateField(input_formats=['%d/%m/%Y'])
     message = forms.CharField(widget=forms.Textarea)
 
 
@@ -81,15 +81,16 @@ def book(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
 
-        if os.environ['ENVIRONMENT'] == 'production':
-            email_to = form.cleaned_data['email']
+        if settings.ENVIRONMENT == 'production':
+            email_to = form.cleaned_data['email_address']
         else:
             email_to = 'anggiarto@gmail.com'
 
         if form.is_valid():
             # reference_number = request.POST.get('reference')
             reference_number = '123'
-            Landing.send_confirmation_email(
+            landing = Landing()
+            landing.send_confirmation_email(
                 first_name=form.cleaned_data['first_name'],
                 last_name=form.cleaned_data['last_name'],
                 contact_number=form.cleaned_data['contact_number'],
