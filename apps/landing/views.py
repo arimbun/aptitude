@@ -1,4 +1,3 @@
-from apps.booking_types.models import BookingTypes
 from apps.countries.models import Country
 from apps.landing.models import Landing
 from django.conf import settings
@@ -19,7 +18,6 @@ class BookingForm(forms.Form):
     country = forms.ModelChoiceField(queryset=Country.objects.all())
     postcode = forms.CharField(max_length=100)
     appointment_date = forms.DateField(input_formats=['%d/%m/%Y'])
-    booking_types = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
     message = forms.CharField(widget=forms.Textarea)
 
 
@@ -83,12 +81,12 @@ def book(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
 
-        if form.is_valid():
-            if settings.ENVIRONMENT == 'production':
-                email_to = form.cleaned_data['email_address']
-            else:
-                email_to = 'anggiarto@gmail.com'
+        if settings.ENVIRONMENT == 'production':
+            email_to = form.cleaned_data['email_address']
+        else:
+            email_to = 'anggiarto@gmail.com'
 
+        if form.is_valid():
             # reference_number = request.POST.get('reference')
             reference_number = '123'
             landing = Landing()
