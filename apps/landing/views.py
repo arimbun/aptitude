@@ -1,7 +1,6 @@
 from apps.booking_types.models import BookingTypes
 from apps.countries.models import Country
 from apps.landing.models import Landing
-from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
@@ -84,10 +83,19 @@ def book(request):
         form = BookingForm(request.POST)
 
         if form.is_valid():
-            email_to = ['info@aptitudeworld.com.au', form.cleaned_data['email_address']]
+            # get form data
             first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name'],
+            last_name = form.cleaned_data['last_name']
+            booking_type = form.cleaned_data['booking_type'].name
 
+            # calculate price
+            total_price_amount = form.cleaned_data['booking_type'].price
+            total_price_currency = form.cleaned_data['booking_type'].currency
+            total_price_str = str(total_price_currency) + str(int(total_price_amount))
+            deposit_paid_str = 'AUD5'
+            total_owing_str = 'AUD30'
+
+            # send confirmation email
             landing = Landing()
             reference_number = landing.generate_booking_reference_number(first_name, last_name)
             landing.send_confirmation_email(
@@ -95,14 +103,16 @@ def book(request):
                 last_name=last_name,
                 contact_number=form.cleaned_data['contact_number'],
                 email_from='info@aptitudeworld.com.au',
-                email_to=email_to,
+                email_to=form.cleaned_data['email_address'],
                 reference_number=reference_number,
                 message=form.cleaned_data['message'],
                 country=form.cleaned_data['country'],
                 postcode=form.cleaned_data['postcode'],
                 appointment_date=form.cleaned_data['appointment_date'],
-                total_price=5,
-                deposit_paid=3)
+                booking_type=booking_type,
+                total_price=total_price_str,
+                deposit_paid=deposit_paid_str,
+                total_owing=total_owing_str)
             return HttpResponseRedirect('/')
     else:
         form = BookingForm()

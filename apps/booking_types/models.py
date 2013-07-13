@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 class BookingTypes(models.Model):
     name = models.CharField(max_length=100)
     price = models.FloatField()
+    currency = models.CharField(max_length=3)
 
     class Meta:
         db_table = 'booking_types'
@@ -12,4 +13,10 @@ class BookingTypes(models.Model):
         verbose_name_plural = _('BookingTypes')
 
     def __unicode__(self):
-        return self.name + ' (AU$' + str(int(self.price)) + ')'
+        return self.name + ' (' + self.currency + str(int(self.price)) + ')'
+
+        # def get_name(self):
+        #     return self.name
+        #
+        # def get_price(self):
+        #     return self.price

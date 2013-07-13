@@ -6,7 +6,8 @@ from django.http import HttpResponse
 
 class Landing(models.Model):
     def send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
-                                message, country, postcode, appointment_date, total_price, deposit_paid):
+                                message, country, postcode, appointment_date, total_price, deposit_paid, total_owing,
+                                booking_type):
         """
         Sends a booking confirmation email to the customer.
         :param first_name: Customer's first name
@@ -28,6 +29,7 @@ class Landing(models.Model):
         Email Address: %s
         Country: %s
         Postcode: %s
+        Booking type: %s
         Data scanning appointment: %s (A consultant will contact you to advise of the appointment time)
         Total Price: %s
         Deposit Paid: %s
@@ -67,19 +69,21 @@ class Landing(models.Model):
         Ph 1300 88 78 71
         info@aptitudeworld.com.au
         """ % (
-            reference_number, full_name, contact_number, ', '.join(email_to), country, postcode,
+            reference_number, full_name, contact_number, email_to, country, postcode, booking_type,
             self.format_date(appointment_date), self.format_price(total_price), self.format_price(deposit_paid),
-            self.format_price(total_price - deposit_paid), message)
+            self.format_price(total_owing), message)
 
         try:
-            send_mail(title, message, email_from, email_to, fail_silently=False)
+            send_mail(title, message, email_from, [email_to, 'info@aptitudeworld.com.au'], fail_silently=False)
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
 
     def generate_booking_reference_number(self, first_name, last_name):
-        initials = str(first_name)[:1].upper() + str(last_name)[:1].upper()
-
-        return 1
+        initials = first_name[:1].upper() + last_name[:1].upper()
+        dateobj = datetime.now()
+        year = dateobj.year - 2012
+        reference_number = str(initials) + str(year) + str(dateobj.hour) + str(dateobj.minute) + str(dateobj.second)
+        return reference_number
 
     def format_date(self, date):
         # parse date
