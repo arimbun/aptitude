@@ -158,3 +158,10 @@ LOGGING = {
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# SMTP config
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'app15033910@heroku.com'
+EMAIL_HOST_PASSWORD = 'phshjz0l'
+EMAIL_USE_TLS = True
