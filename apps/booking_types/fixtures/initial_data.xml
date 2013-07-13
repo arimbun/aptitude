@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object pk="1" model="booking_types.bookingtypes">
+        <field type="CharField" name="name">Report Only</field>
+        <field type="FloatField" name="price">150</field>
+    </object>
+    <object pk="2" model="booking_types.bookingtypes">
+        <field type="CharField" name="name">Report + Consultation</field>
+        <field type="FloatField" name="price">275</field>
+    </object>
+</django-objects>
