@@ -1,0 +1,1 @@
+from apps.paypal.standard.ipn.tests.test_ipn import *

@@ -1,0 +1,1 @@
+from apps.paypal.standard.pdt.tests.test_pdt import *

@@ -130,13 +130,14 @@ INSTALLED_APPS = (
     'apps.booking_types',
     'apps.countries',
     'apps.landing',
+    'apps.paypal.standard.ipn',
 )
 
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
+# See http://docs.django    project.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
 LOGGING = {
     'version': 1,
@@ -166,3 +167,6 @@ LOGGING = {
 #   python -m smtpd -n -c DebuggingServer localhost:1025
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+
+# PayPal config
+PAYPAL_RECEIVER_EMAIL = "anggiarto@gmail.com"

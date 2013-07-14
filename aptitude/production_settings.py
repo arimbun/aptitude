@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'apps.booking_types',
     'apps.countries',
     'apps.landing',
+    'apps.paypal.standard.ipn',
 )
 
 
@@ -165,3 +166,6 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'app15033910@heroku.com'
 EMAIL_HOST_PASSWORD = 'phshjz0l'
 EMAIL_USE_TLS = True
+
+# PayPal config
+PAYPAL_RECEIVER_EMAIL = "anggiarto@gmail.com"
