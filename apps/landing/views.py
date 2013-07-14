@@ -122,18 +122,18 @@ def book(request):
     title = COMPANY_NAME + ' - ' + 'Book an Appointment'
 
     # Paypal button config
-    # paypal_dict = {
-    #     "business": "anggiarto@gmail.com",
-    #     "amount": "10000000.00",
-    #     "item_name": "name of the item",
-    #     "invoice": "unique-invoice-id",
-    #     "notify_url": "http://www.example.com/your-ipn-location/",
-    #     "return_url": "http://www.example.com/your-return-location/",
-    #     "cancel_return": "http://www.example.com/your-cancel-location/",
-    # }
-    #
-    # # Create the instance.
-    # form = PayPalPaymentsForm(initial=paypal_dict)
+    paypal_dict = {
+        "business": "anggiarto@gmail.com",
+        "amount": "10000000.00",
+        "item_name": "Paypal Report Only",
+        "invoice": "unique-invoice-id",
+        "notify_url": "http://www.example.com/your-ipn-location/",
+        "return_url": "http://www.example.com/your-return-location/",
+        "cancel_return": "http://www.example.com/your-cancel-location/",
+    }
+
+    # Create the instance.
+    form = PayPalPaymentsForm(initial=paypal_dict)
 
     return render(request, 'landing/book.html',
                   {

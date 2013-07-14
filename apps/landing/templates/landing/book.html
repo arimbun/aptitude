@@ -11,7 +11,7 @@
 
                     <form action="/book" method="post">
                         {% csrf_token %}
-                        {{ form.as_p }}
+                        {{ form.render }}
                         <input type="submit" value="Submit"/>
                     </form>
                     <div class="cleaner"></div>

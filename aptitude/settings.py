@@ -130,7 +130,6 @@ INSTALLED_APPS = (
     'apps.booking_types',
     'apps.countries',
     'apps.landing',
-    'apps.paypal.standard.ipn',
 )
 
 
