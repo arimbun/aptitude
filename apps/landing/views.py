@@ -1,7 +1,6 @@
 from apps.booking_types.models import BookingTypes
 from apps.countries.models import Country
 from apps.landing.models import Landing
-from apps.paypal.standard.forms import PayPalPaymentsForm
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
@@ -120,20 +119,6 @@ def book(request):
 
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Book an Appointment'
-
-    # Paypal button config
-    paypal_dict = {
-        "business": "anggiarto@gmail.com",
-        "amount": "10000000.00",
-        "item_name": "Paypal Report Only",
-        "invoice": "unique-invoice-id",
-        "notify_url": "http://www.example.com/your-ipn-location/",
-        "return_url": "http://www.example.com/your-return-location/",
-        "cancel_return": "http://www.example.com/your-cancel-location/",
-    }
-
-    # Create the instance.
-    form = PayPalPaymentsForm(initial=paypal_dict)
 
     return render(request, 'landing/book.html',
                   {
