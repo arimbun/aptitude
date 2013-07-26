@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import BadHeaderError, EmailMultiAlternatives
 from django.db import models
 from django.http import HttpResponse
 import os
@@ -22,8 +22,15 @@ class Landing(models.Model):
         title = 'Aptitude Assessment Booking Confirmation %s' % reference_number
         full_name = '%s %s' % (first_name, last_name)
 
-        confirmation_email_file = open(os.getcwd() + '/apps/landing/templates/landing/confirmation_email.html', 'r')
-        message = confirmation_email_file.read() % (
+        confirmation_email_html = open(os.getcwd() + '/apps/landing/templates/landing/confirmation_email.html', 'r')
+        email_html = confirmation_email_html.read() % (
+            reference_number, full_name, contact_number, email_to, country, postcode, booking_type,
+            self.format_date(appointment_date), self.format_price(total_price), self.format_price(deposit_paid),
+            self.format_price(total_owing), message
+        )
+
+        confirmation_email_txt = open(os.getcwd() + '/apps/landing/templates/landing/confirmation_email.txt', 'r')
+        email_txt = confirmation_email_txt.read() % (
             reference_number, full_name, contact_number, email_to, country, postcode, booking_type,
             self.format_date(appointment_date), self.format_price(total_price), self.format_price(deposit_paid),
             self.format_price(total_owing), message
@@ -31,7 +38,9 @@ class Landing(models.Model):
 
         try:
             # send_mail(title, message, email_from, [email_to, 'info@aptitudeworld.com.au'], fail_silently=False)
-            send_mail(title, message, email_from, [email_to], fail_silently=False)
+            email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
+            email_message.attach_alternative(email_html, 'text/html')
+            email_message.send()
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
 
