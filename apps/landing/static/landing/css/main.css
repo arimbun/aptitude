@@ -451,6 +451,7 @@ blockquote {
 
 blockquote div.author {
     font-weight: bold;
+    text-align: right;
 }
 
 .overlay {
