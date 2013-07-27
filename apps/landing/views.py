@@ -107,7 +107,7 @@ def book(request):
                 email_from='info@aptitudeworld.com.au',
                 email_to=form.cleaned_data['email_address'],
                 reference_number=reference_number,
-                message=form.cleaned_data['message'],
+                message=form.cleaned_data['message_to_our_consultant'],
                 country=form.cleaned_data['country'],
                 postcode=form.cleaned_data['postcode'],
                 appointment_date=form.cleaned_data['appointment_date'],

@@ -164,8 +164,13 @@ LOGGING = {
 
 # To print sent email to stdout, uncomment the following lines of code and enable dumb SMTP server with the following command:
 #   python -m smtpd -n -c DebuggingServer localhost:1025
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'app15033910@heroku.com'
+EMAIL_HOST_PASSWORD = 'phshjz0l'
+EMAIL_USE_TLS = True
 
 # PayPal config
 PAYPAL_RECEIVER_EMAIL = "anggiarto@gmail.com"
