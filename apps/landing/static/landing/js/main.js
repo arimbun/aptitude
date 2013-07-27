@@ -11,6 +11,11 @@ $(document).ready(function () {
         fixed: false
     });
 
+    $('#slideshow').cycle({
+        fx: 'fade',
+        speed: 2500
+    });
+
     $.noConflict();
     $('#id_appointment_date').datepicker({
         dateFormat: 'dd/mm/yy'

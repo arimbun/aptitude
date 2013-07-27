@@ -485,54 +485,35 @@ blockquote div.author {
 
 }
 
-.banner {
+/**************************************
+* [begin] rotating images
+**************************************/
+
+#slideshow {
     position: relative;
-    top: -51px;
+    overflow: hidden;
+    margin-top: -51px;
+    margin-bottom: 20px;
+}
+
+.pics {
+    height: 350px;
+    width: 960px;
+    padding: 0;
+    margin: 0;
+}
+
+.pics img {
+    background-color: #eee;
+    height: 350px;
+    width: 960px;
+    top: 0;
+    left: 0;
 }
 
 /**************************************
-* Crossfading images
+* [end] rotating images
 **************************************/
-
-#cf {
-    position: relative;
-    margin-bottom: 320px;
-}
-
-#cf img {
-    position: absolute;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-
-@keyframes cf3FadeInOut {
-    0% {
-        opacity: 1;
-    }
-    45% {
-        opacity: 1;
-    }
-    55% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#cf img.top:hover {
-    opacity: 0;
-}
-
-#cf img.top {
-    animation-name: cf3FadeInOut;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
-    animation-direction: alternate;
-}
 
 ul.errorlist {
     margin: 0;
