@@ -1,5 +1,3 @@
-from apps.booking_types.models import BookingTypes
-from apps.countries.models import Country
 from apps.landing.models import Landing
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
@@ -15,11 +13,14 @@ class BookingForm(forms.Form):
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
     contact_number = forms.CharField(max_length=100)
-    country = forms.ModelChoiceField(queryset=Country.objects.all())
+    address = forms.CharField(widget=forms.Textarea)
     postcode = forms.CharField(max_length=100)
-    booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
+    state = forms.ChoiceField(choices=[('NSW', 'New South Wales')])
+    # country = forms.ModelChoiceField(queryset=Country.objects.all())
+    country = forms.ChoiceField(choices=[('AU', 'Australia')])
+    # booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
     appointment_date = forms.DateField(input_formats=['%d/%m/%Y'])
-    message = forms.CharField(widget=forms.Textarea)
+    message_to_our_consultant = forms.CharField(widget=forms.Textarea)
 
 
 def index(request):
