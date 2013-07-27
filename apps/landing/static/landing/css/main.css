@@ -446,6 +446,11 @@ img#email {
 
 blockquote {
     font-size: 12px;
+    font-style: italic;
+}
+
+blockquote div.author {
+    font-weight: bold;
 }
 
 .overlay {
