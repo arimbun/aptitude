@@ -527,3 +527,14 @@ blockquote {
     animation-duration: 5s;
     animation-direction: alternate;
 }
+
+ul.errorlist {
+    margin: 0;
+}
+
+ul.errorlist li {
+    margin: 0;
+    list-style-type: none;
+    font-size: 10px;
+    color: #dd1144;
+}
