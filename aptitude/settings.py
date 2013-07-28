@@ -166,11 +166,15 @@ LOGGING = {
 #   python -m smtpd -n -c DebuggingServer localhost:1025
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025
+
+# SendGrid email provider credentials
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'app15033910@heroku.com'
 EMAIL_HOST_PASSWORD = 'phshjz0l'
 EMAIL_USE_TLS = True
 
-# PayPal config
-PAYPAL_RECEIVER_EMAIL = "anggiarto@gmail.com"
+# PayPal sandbox merchant (business) account credentials
+PAYPAL_BUSINESS_ACCOUNT_USER = 'anggiarto-facilitator_api1.gmail.com'
+PAYPAL_BUSINESS_ACCOUNT_PWD = '1372680148'
+PAYPAL_BUSINESS_ACCOUNT_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AyYkmMUPXB55FXjnJO0sjFp5fMTx'

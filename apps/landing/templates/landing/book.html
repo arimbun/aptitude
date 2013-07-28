@@ -12,7 +12,18 @@
                     <form action="/book" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <input type="submit" value="Submit"/>
+                        {#                        <input type="submit" value="Submit"/>#}
+                        <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"
+                                data-button="buynow"
+                                data-name="Report &amp; Consultation"
+                                data-quantity="1"
+                                data-amount="198"
+                                data-currency="AUD"
+                                data-shipping="0"
+                                data-tax="0"
+                                data-callback="https://api-3t.sandbox.paypal.com/nvp"
+                                data-env="sandbox"
+                                ></script>
                     </form>
                     <div class="cleaner"></div>
                 </div>

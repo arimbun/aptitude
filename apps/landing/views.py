@@ -81,6 +81,23 @@ def consulting(request):
 
 
 def book(request):
+    form = BookingForm()
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Book an Appointment'
+
+    return render(request, 'landing/book.html',
+                  {
+                      'title': title,
+                      'keywords': keywords,
+                      'description': description,
+                      'page': 'book',
+                      'year': year,
+                      'form': form,
+                  }
+    )
+
+
+def email_confirmation(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
 
@@ -115,23 +132,9 @@ def book(request):
                 total_price=total_price_str,
                 deposit_paid=deposit_paid_str,
                 total_owing=total_owing_str)
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/book/success')
     else:
-        form = BookingForm()
-
-    keywords, description, year = __init()
-    title = COMPANY_NAME + ' - ' + 'Book an Appointment'
-
-    return render(request, 'landing/book.html',
-                  {
-                      'title': title,
-                      'keywords': keywords,
-                      'description': description,
-                      'page': 'book',
-                      'year': year,
-                      'form': form,
-                  }
-    )
+        return HttpResponseRedirect('/book/failure')
 
 
 def book_success(request):
