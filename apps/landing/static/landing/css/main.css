@@ -241,6 +241,12 @@ a.more:hover {
     background: url(../img/templatemo_menu_hover.png) bottom center no-repeat
 }
 
+#book_button {
+    color: #000;
+    font-weight: bold;
+    background: url(../img/templatemo_menu_red.png) bottom center no-repeat
+}
+
 /* end of menu */
 
 #templatemo_middle {
