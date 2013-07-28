@@ -134,6 +134,34 @@ def book(request):
     )
 
 
+def book_success(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Booking Successful'
+    return render_to_response('landing/book/success.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'book',
+                                  'year': year,
+                              }
+    )
+
+
+def book_failure(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Booking Failed'
+    return render_to_response('landing/book/failure.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'book',
+                                  'year': year,
+                              }
+    )
+
+
 def __init():
     keywords = ','.join(META_KEYWORDS)
     description = ','.join(META_KEYWORDS)
