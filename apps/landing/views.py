@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
 from django import forms
+import os
 
 COMPANY_NAME = 'Aptitude World ANZ'
 META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Australia', 'Aptitude World New Zealand']
@@ -84,6 +85,7 @@ def book(request):
     form = BookingForm()
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Book an Appointment'
+    environment = os.environ['ENVIRONMENT']
 
     return render(request, 'landing/book.html',
                   {
@@ -93,6 +95,7 @@ def book(request):
                       'page': 'book',
                       'year': year,
                       'form': form,
+                      'environment': environment,
                   }
     )
 

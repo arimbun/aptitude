@@ -19,6 +19,12 @@ $(document).ready(function () {
     /**
      * PayPal setting adjustments.
      */
+    var environment = $('input[name="environment"]').val();
+    if (environment == 'production') {
+        $('input[name="env"]').val('www');
+        $('form[class="paypal-button"]').attr('action', 'https://www.paypal.com/cgi-bin/webscr');
+    }
+
     $('#payment_options').hide();
     $('select[name="booking_type"]').change(function () {
         var selected = $(this).val();
