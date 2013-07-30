@@ -13,19 +13,29 @@
                         {% csrf_token %}
                         {{ form.as_p }}
                         {#                        <input type="submit" value="Submit"/>#}
-                        <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"
-                                data-button="buynow"
-                                data-name="Report &amp; Consultation"
-                                data-quantity="1"
-                                data-amount="198"
-                                data-currency="AUD"
-                                data-shipping="0"
-                                data-tax="0"
-                                data-callback="https://api-3t.sandbox.paypal.com/nvp"
-                                data-env="sandbox"
-                                ></script>
+
+                        <div id="payment_options">
+                            <p>Choose your payment option below:</p>
+
+                            <ul>
+                                <li>
+                                    PayPal
+                                    <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"
+                                            data-button="buynow"
+                                            data-name="Report &amp; Consultation"
+                                            data-quantity="1"
+                                            data-amount="0"
+                                            data-currency="AUD"
+                                            data-shipping="0"
+                                            data-tax="0"
+                                            data-callback="https://api-3t.sandbox.paypal.com/nvp"
+                                            data-env="sandbox"></script>
+                                </li>
+                            </ul>
+                        </div>
                     </form>
                     <div class="cleaner"></div>
+
                 </div>
                 <!-- end of templatemo fp services -->
 

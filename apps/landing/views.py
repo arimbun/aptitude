@@ -15,7 +15,7 @@ class BookingForm(forms.Form):
     last_name = forms.CharField(max_length=100)
     contact_number = forms.CharField(max_length=100)
     address = forms.CharField(widget=forms.Textarea)
-    postcode = forms.CharField(max_length=100)
+    postcode = forms.CharField(max_length=4)
     state = forms.ChoiceField(choices=[('NSW', 'New South Wales')])
     # country = forms.ModelChoiceField(queryset=Country.objects.all())
     country = forms.ChoiceField(choices=[('AU', 'Australia')])
