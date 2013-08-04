@@ -22,10 +22,12 @@ $(document).ready(function () {
     var environment = $('input[name="environment"]').val();
     if (environment == 'production') {
         $('input[name="env"]').val('www');
+        $('input[name="business"]').val('info@aptitudeworld.com.au');
+        $('input[name="notify_url"]').val('http://aptitude.herokuapp.com/email_confirmation');
         $('form[class="paypal-button"]').attr('action', 'https://www.paypal.com/cgi-bin/webscr');
     }
 
-    $('#payment_options').hide();
+//    $('#payment_options').hide();
     $('select[name="booking_type"]').change(function () {
         var selected = $(this).val();
         if (selected == 1) {

@@ -86,6 +86,7 @@ def book(request):
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Book an Appointment'
     environment = os.environ['ENVIRONMENT']
+    # environment = 'production'
 
     return render(request, 'landing/book.html',
                   {
