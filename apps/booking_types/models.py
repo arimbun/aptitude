@@ -13,7 +13,7 @@ class BookingTypes(models.Model):
         verbose_name_plural = _('BookingTypes')
 
     def __unicode__(self):
-        return self.name + ' (' + self.currency + str(int(self.price)) + ')'
+        return self.name + ' (' + str(int(self.price)) + ' ' + self.currency + ')'
 
         # def get_name(self):
         #     return self.name

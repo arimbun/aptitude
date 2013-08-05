@@ -28,27 +28,27 @@ $(document).ready(function () {
     }
 
 //    $('#payment_options').hide();
-    $('select[name="booking_type"]').change(function () {
-        var selected = $(this).val();
-        if (selected == 1) {
-            $('#payment_options').show();
-            $('input[name="item_name"]').val('Report Only');
-            $('input[name="amount"]').val('100');
-            $('input[name="shipping"]').val('10');
-        }
-        else if (selected == 2) {
-            $('#payment_options').show();
-            $('input[name="item_name"]').val('Report & Consultation');
-            $('input[name="amount"]').val('198');
-            $('input[name="shipping"]').val('0');
-        }
-        else {
-            $('#payment_options').hide();
-            $('input[name="item_name"]').val('');
-            $('input[name="amount"]').val('0');
-            $('input[name="shipping"]').val('0');
-        }
-    });
+//    $('select[name="booking_type"]').change(function () {
+//        var selected = $(this).val();
+//        if (selected == 1) {
+//            $('#payment_options').show();
+//            $('input[name="item_name"]').val('Report Only');
+//            $('input[name="amount"]').val('100');
+//            $('input[name="shipping"]').val('10');
+//        }
+//        else if (selected == 2) {
+//            $('#payment_options').show();
+//            $('input[name="item_name"]').val('Report & Consultation');
+//            $('input[name="amount"]').val('198');
+//            $('input[name="shipping"]').val('0');
+//        }
+//        else {
+//            $('#payment_options').hide();
+//            $('input[name="item_name"]').val('');
+//            $('input[name="amount"]').val('0');
+//            $('input[name="shipping"]').val('0');
+//        }
+//    });
 
     /**
      * Postcode validation.

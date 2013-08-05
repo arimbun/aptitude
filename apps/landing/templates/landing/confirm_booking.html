@@ -1,0 +1,115 @@
+{% extends 'landing/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <input type="hidden" name="environment" value="{{ environment }}"/>
+    <div id="templatemo_body_wrapper">
+        <div id="templatemo_wrapper">
+            <div id="templatemo_main">
+
+                <div class="col_w960">
+                    <h3>Please review your order below</h3>
+
+                    <h4>Personal Details</h4>
+
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{ first_name }} {{ last_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Email address</td>
+                            <td>{{ email_address }}</td>
+                        </tr>
+                        <tr>
+                            <td>Contact number</td>
+                            <td>{{ contact_number }}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{ address }}</td>
+                        </tr>
+                        <tr>
+                            <td>Suburb</td>
+                            <td>{{ suburb }}</td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>{{ state }}</td>
+                        </tr>
+                        <tr>
+                            <td>Postcode</td>
+                            <td>{{ postcode }}</td>
+                        </tr>
+                        <tr>
+                            <td>Country</td>
+                            <td>{{ country }}</td>
+                        </tr>
+                    </table>
+
+                    <h4>Booking Details</h4>
+
+                    <table>
+                        <tr>
+                            <td>Booking type</td>
+                            <td>{{ booking_type }}</td>
+                        </tr>
+                        <tr>
+                            <td>Appointment date</td>
+                            <td>{{ appointment_date }}</td>
+                        </tr>
+                        <tr>
+                            <td>Message to our consultant</td>
+                            <td>{{ message_to_our_consultant }}</td>
+                        </tr>
+                    </table>
+
+                    <h4>Payment</h4>
+
+                    <table>
+                        <tr>
+                            <td><b>Order total</b></td>
+                            <td><b>{{ total_amount }}</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Deposit payment</b></td>
+                            <td><b>{{ deposit_amount }}</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Owing amount</b></td>
+                            <td><b>{{ owing_amount }}</b></td>
+                        </tr>
+                    </table>
+
+                    <div id="payment_options">
+                        <h5>Please choose from the following payment options:</h5>
+                        <h6>PayPal</h6>
+
+                        <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"
+                                data-button="buynow"
+                                data-name="{{ booking_type }}"
+                                data-quantity="1"
+                                data-amount="{{ deposit_amount }}"
+                                data-currency="AUD"
+                                data-shipping="0"
+                                data-tax="0"
+                                data-env="sandbox"></script>
+                    </div>
+                    <div class="cleaner"></div>
+
+                </div>
+                <!-- end of templatemo fp services -->
+
+                <div class="col_w960 col_w960_last"></div>
+                <div class="cleaner"></div>
+            </div>
+            <!-- end of main -->
+
+            <div class="cleaner"></div>
+        </div>
+        <!-- end of wrapper -->
+        <div class="cleaner"></div>
+    </div>
+    <!-- end of body wrapper -->
+{% endblock %}
+

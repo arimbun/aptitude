@@ -10,30 +10,21 @@
                 <div class="col_w960">
                     <p>To book an appointment with one of our consultants, please fill in the form below.</p>
 
-                    <form action="/book" method="post">
+                    <form action="/confirm_booking" method="post">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        {#                        <input type="submit" value="Submit"/>#}
 
-                        <div id="payment_options">
-                            <p>Choose your payment option below:</p>
+                        <h3>Personal Details</h3>
+                        {{ personal_form.as_p }}
 
-                            <ul>
-                                <li>
-                                    PayPal
-                                    <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"
-                                            data-button="buynow"
-                                            data-name="Report &amp; Consultation"
-                                            data-quantity="1"
-                                            data-amount="0"
-                                            data-currency="AUD"
-                                            data-shipping="0"
-                                            data-tax="0"
-                                            data-callback="localhost:8000/email_confirmation"
-                                            data-env="sandbox"></script>
-                                </li>
-                            </ul>
-                        </div>
+                        <h3>Booking Details</h3>
+                        {{ booking_form.as_p }}
+
+                        <h3>Payment Details</h3>
+
+                        <p>You may choose to pay the booking amount in deposit or full.</p>
+                        {{ payment_form.as_p }}
+
+                        <input type="submit" value="Review Booking"/>
                     </form>
                     <div class="cleaner"></div>
 
