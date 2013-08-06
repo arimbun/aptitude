@@ -115,8 +115,6 @@ def confirm_booking(request):
     if request.method == 'POST':
         keywords, description, year = __init()
         title = COMPANY_NAME + ' - ' + 'Book an Appointment'
-        environment = os.environ['ENVIRONMENT']
-        # environment = 'production'
 
         personal_form = PersonalForm(request.POST)
         booking_form = BookingForm(request.POST)
@@ -183,7 +181,6 @@ def confirm_booking(request):
                               'total_amount': total_price_str,
                               'deposit_amount': deposit_paid_str,
                               'owing_amount': total_owing_str,
-                              'environment': environment,
                           }
             )
         else:
@@ -194,6 +191,7 @@ def confirm_booking(request):
 
 def book_success(request):
     if request.method == 'POST':
+        environment = os.environ['ENVIRONMENT']
         # get form data
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
@@ -245,6 +243,7 @@ def book_success(request):
                                       'deposit_amount': deposit_amount,
                                       'page': 'book',
                                       'year': year,
+                                      'environment': environment,
                                   }
         )
     else:
