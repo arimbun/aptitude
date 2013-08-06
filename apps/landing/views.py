@@ -233,17 +233,22 @@ def book_success(request):
             deposit_paid=deposit_amount,
             total_owing=owing_amount)
 
-    keywords, description, year = __init()
-    title = COMPANY_NAME + ' - ' + 'Booking Successful'
-    return render_to_response('landing/book/success.html',
-                              {
-                                  'title': title,
-                                  'keywords': keywords,
-                                  'description': description,
-                                  'page': 'book',
-                                  'year': year,
-                              }
-    )
+        keywords, description, year = __init()
+        title = COMPANY_NAME + ' - ' + 'Booking Successful'
+        return render_to_response('landing/book/success.html',
+                                  {
+                                      'title': title,
+                                      'keywords': keywords,
+                                      'description': description,
+                                      'booking_type': booking_type,
+                                      'reference_number': reference_number,
+                                      'deposit_amount': deposit_amount,
+                                      'page': 'book',
+                                      'year': year,
+                                  }
+        )
+    else:
+        return HttpResponseRedirect('/book')
 
 
 def book_failure(request):

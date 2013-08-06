@@ -10,6 +10,23 @@
                     <p>Thank you for booking an appointment with us! An email has been sent to your nominated email
                         address for confirmation.</p>
 
+                    <h4>Payment Options</h4>
+
+                    <div id="payment_options">
+                        <p>Please choose from the following payment options:</p>
+                        <h6>PayPal</h6>
+
+                        <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"
+                                data-button="buynow"
+                                data-name="{{ booking_type }} {{ reference_number }}"
+                                data-quantity="1"
+                                data-amount="{{ deposit_amount }}"
+                                data-currency="AUD"
+                                data-shipping="0"
+                                data-tax="0"
+                                data-env="sandbox"></script>
+                    </div>
+
                     <div class="cleaner"></div>
                 </div>
                 <!-- end of templatemo fp services -->
