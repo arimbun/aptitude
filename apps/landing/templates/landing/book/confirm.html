@@ -81,20 +81,41 @@
                         </tr>
                     </table>
 
-                    <div id="payment_options">
-                        <h5>Please choose from the following payment options:</h5>
-                        <h6>PayPal</h6>
+                    <form action="/book/success" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="first_name" value="{{ first_name }}">
+                        <input type="hidden" name="last_name" value="{{ last_name }}">
+                        <input type="hidden" name="email_address" value="{{ email_address }}">
+                        <input type="hidden" name="contact_number" value="{{ contact_number }}">
+                        <input type="hidden" name="address" value="{{ address }}">
+                        <input type="hidden" name="suburb" value="{{ suburb }}">
+                        <input type="hidden" name="state" value="{{ state }}">
+                        <input type="hidden" name="postcode" value="{{ postcode }}">
+                        <input type="hidden" name="country" value="{{ country }}">
+                        <input type="hidden" name="booking_type" value="{{ booking_type }}">
+                        <input type="hidden" name="appointment_date" value="{{ appointment_date }}">
+                        <input type="hidden" name="message_to_our_consultant" value="{{ message_to_our_consultant }}">
+                        <input type="hidden" name="total_amount" value="{{ total_amount }}">
+                        <input type="hidden" name="deposit_amount" value="{{ deposit_amount }}">
+                        <input type="hidden" name="owing_amount" value="{{ owing_amount }}">
+                        <input type="submit" value="Submit">
+                    </form>
+                    {#                    <div id="payment_options">#}
+                    {#                        <h5>Please choose from the following payment options:</h5>#}
+                    {#                        <h6>PayPal</h6>#}
+                    {##}
+                    {#                        <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"#}
+                    {#                                data-button="buynow"#}
+                    {#                                data-name="{{ booking_type }}"#}
+                    {#                                data-quantity="1"#}
+                    {#                                data-amount="{{ deposit_amount }}"#}
+                    {#                                data-currency="AUD"#}
+                    {#                                data-shipping="0"#}
+                    {#                                data-tax="0"#}
+                    {#                                data-env="sandbox"></script>#}
+                    {#                    </div>#}
 
-                        <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"
-                                data-button="buynow"
-                                data-name="{{ booking_type }}"
-                                data-quantity="1"
-                                data-amount="{{ deposit_amount }}"
-                                data-currency="AUD"
-                                data-shipping="0"
-                                data-tax="0"
-                                data-env="sandbox"></script>
-                    </div>
+
                     <div class="cleaner"></div>
 
                 </div>

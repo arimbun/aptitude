@@ -161,7 +161,7 @@ def confirm_booking(request):
             deposit_paid_str = str(deposit_price_amount) + ' ' + str(deposit_price_currency)
             total_owing_str = str(owing_amount) + ' ' + str(owing_currency)
 
-            return render(request, 'landing/confirm_booking.html',
+            return render(request, 'landing/book/confirm.html',
                           {
                               'title': title,
                               'keywords': keywords,
@@ -192,47 +192,47 @@ def confirm_booking(request):
         return HttpResponseRedirect('/book')
 
 
-def email_confirmation(request):
-    if request.method == 'POST':
-        form = BookingForm(request.POST)
-
-        if form.is_valid():
-            # get form data
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            booking_type = form.cleaned_data['booking_type'].name
-
-            # calculate price
-            total_price_amount = form.cleaned_data['booking_type'].price
-            total_price_currency = form.cleaned_data['booking_type'].currency
-            total_price_str = str(total_price_currency) + str(int(total_price_amount))
-            deposit_paid_str = 'AUD5'
-            total_owing_str = 'AUD30'
-
-            # send confirmation email
-            landing = Landing()
-            reference_number = landing.generate_booking_reference_number(first_name, last_name)
-            landing.send_confirmation_email(
-                first_name=first_name,
-                last_name=last_name,
-                contact_number=form.cleaned_data['contact_number'],
-                email_from='info@aptitudeworld.com.au',
-                email_to=form.cleaned_data['email_address'],
-                reference_number=reference_number,
-                message=form.cleaned_data['message_to_our_consultant'],
-                country=form.cleaned_data['country'],
-                postcode=form.cleaned_data['postcode'],
-                appointment_date=form.cleaned_data['appointment_date'],
-                booking_type=booking_type,
-                total_price=total_price_str,
-                deposit_paid=deposit_paid_str,
-                total_owing=total_owing_str)
-            return HttpResponseRedirect('/book/success')
-    else:
-        return HttpResponseRedirect('/book/failure')
-
-
 def book_success(request):
+    if request.method == 'POST':
+        # get form data
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email_address = request.POST['email_address']
+        contact_number = request.POST['contact_number']
+        address = request.POST['address']
+        suburb = request.POST['suburb']
+        state = request.POST['state']
+        postcode = request.POST['postcode']
+        country = request.POST['country']
+        booking_type = request.POST['booking_type']
+        appointment_date = request.POST['appointment_date']
+        message_to_our_consultant = request.POST['message_to_our_consultant']
+        total_amount = request.POST['total_amount']
+        deposit_amount = request.POST['deposit_amount']
+        owing_amount = request.POST['owing_amount']
+
+        # send confirmation email
+        landing = Landing()
+        reference_number = landing.generate_booking_reference_number(first_name, last_name)
+        landing.send_confirmation_email(
+            first_name=first_name,
+            last_name=last_name,
+            contact_number=contact_number,
+            email_from='info@aptitudeworld.com.au',
+            email_to=email_address,
+            reference_number=reference_number,
+            message=message_to_our_consultant,
+            address=address,
+            suburb=suburb,
+            state=state,
+            country=country,
+            postcode=postcode,
+            appointment_date=appointment_date,
+            booking_type=booking_type,
+            total_price=total_amount,
+            deposit_paid=deposit_amount,
+            total_owing=owing_amount)
+
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Booking Successful'
     return render_to_response('landing/book/success.html',
