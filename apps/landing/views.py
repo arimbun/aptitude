@@ -114,7 +114,7 @@ def book(request):
 def confirm_booking(request):
     if request.method == 'POST':
         keywords, description, year = __init()
-        title = COMPANY_NAME + ' - ' + 'Book an Appointment'
+        title = COMPANY_NAME + ' - ' + 'Confirm Booking'
         environment = os.environ['ENVIRONMENT']
         # environment = 'production'
 
@@ -255,6 +255,20 @@ def book_failure(request):
                                   'keywords': keywords,
                                   'description': description,
                                   'page': 'book',
+                                  'year': year,
+                              }
+    )
+
+
+def toc(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Terms and Conditions'
+    return render_to_response('landing/toc.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'toc',
                                   'year': year,
                               }
     )
