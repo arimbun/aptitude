@@ -14,9 +14,3 @@ class BookingTypes(models.Model):
 
     def __unicode__(self):
         return self.name + ' (' + str(int(self.price)) + ' ' + self.currency + ')'
-
-        # def get_name(self):
-        #     return self.name
-        #
-        # def get_price(self):
-        #     return self.price
