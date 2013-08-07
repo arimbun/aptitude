@@ -103,24 +103,9 @@
                         <input type="hidden" name="deposit_amount" value="{{ deposit_amount }}">
                         <input type="hidden" name="owing_amount" value="{{ owing_amount }}">
                         <input id="toc_agreement" type="checkbox" name="toc_agreement">
-                        <label for="toc_agreement">I agree to the <a href="/toc" target="_blank">terms and conditions</a></label><br><br>
+                        <label for="toc_agreement">I agree to the <a href="{% url 'landing:toc' %}" target="_blank">terms and conditions</a></label><br><br>
                         <input type="submit" name="book_submit" value="Submit">
                     </form>
-                    {#                    <div id="payment_options">#}
-                    {#                        <h5>Please choose from the following payment options:</h5>#}
-                    {#                        <h6>PayPal</h6>#}
-                    {##}
-                    {#                        <script src="{% static 'landing/js/paypal-button.min.js' %}?merchant=anggiarto-facilitator@gmail.com"#}
-                    {#                                data-button="buynow"#}
-                    {#                                data-name="{{ booking_type }}"#}
-                    {#                                data-quantity="1"#}
-                    {#                                data-amount="{{ deposit_amount }}"#}
-                    {#                                data-currency="AUD"#}
-                    {#                                data-shipping="0"#}
-                    {#                                data-tax="0"#}
-                    {#                                data-env="sandbox"></script>#}
-                    {#                    </div>#}
-
 
                     <div class="cleaner"></div>
 
