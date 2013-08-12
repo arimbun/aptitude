@@ -19,4 +19,6 @@ urlpatterns = patterns(
     url(r'^book/confirm', views.confirm_booking, name='confirm_booking'),
     # eg: /book
     url(r'^book', views.book, name='book'),
+    # eg: /toc
+    url(r'^toc', views.toc, name='toc'),
 )

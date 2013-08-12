@@ -58,6 +58,10 @@
                             <td>{{ appointment_date }}</td>
                         </tr>
                         <tr>
+                            <td>Appointment time</td>
+                            <td>A consultant will contact you to advise the appointment time</td>
+                        </tr>
+                        <tr>
                             <td>Message to our consultant</td>
                             <td>{{ message_to_our_consultant }}</td>
                         </tr>
@@ -80,7 +84,7 @@
                         </tr>
                     </table>
 
-                    <form action="/book/success" method="post">
+                    <form action="/book/success" method="post" onsubmit="return validateTocAgreed();">
                         {% csrf_token %}
                         <input type="hidden" name="first_name" value="{{ first_name }}">
                         <input type="hidden" name="last_name" value="{{ last_name }}">
@@ -97,7 +101,9 @@
                         <input type="hidden" name="total_amount" value="{{ total_amount }}">
                         <input type="hidden" name="deposit_amount" value="{{ deposit_amount }}">
                         <input type="hidden" name="owing_amount" value="{{ owing_amount }}">
-                        <input type="submit" value="Submit">
+                        <input id="toc_agreement" type="checkbox" name="toc_agreement">
+                        <label for="toc_agreement">I agree to the <a href="{% url 'landing:toc' %}" target="_blank">terms and conditions</a></label><br><br>
+                        <input type="submit" name="book_submit" value="Submit">
                     </form>
 
                     <div class="cleaner"></div>
