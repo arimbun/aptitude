@@ -183,6 +183,7 @@ def confirm_booking(request):
                               'total_amount': total_price_str,
                               'deposit_amount': deposit_paid_str,
                               'owing_amount': total_owing_str,
+                              'environment': environment,
                           }
             )
         else:
