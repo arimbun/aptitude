@@ -7,16 +7,20 @@
     <title>{{ title }}</title>
     <meta name="keywords" content="{{ keywords }}"/>
     <meta name="description" content="{{ description }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{% static 'landing/img/aptitude/favicon.ico' %}"/>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/bootstrap-responsive.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/custom.css' %}"/>
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 
     <!-- Javascripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="{% static 'landing/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script type="text/javascript" src="//cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
     <script type="text/javascript"
@@ -27,45 +31,41 @@
 
 <body>
 
-<div id="templatemo_body_wrapper">
-    <div id="templatemo_wrapper">
-        <div id="templatemo_header">
+<div class="container" id="cNav">
+    <div class="row">
+        <div class="span10 offset1">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
 
-            <div id="site_title"><h1><a href="{% url 'landing:index' %}">{{ title }}</a></h1>
+                    <a class="brand" href="index.html"><img
+                            src="{% static 'landing/img/aptitude/logo-only-small.png' %}" alt="Aptitude"></a>
+
+                    <div class="visible-desktop"><a id="mainTitle" href="index.html"><span
+                            style="color:#eb8a40">A</span>ptitude</a></div>
+                    {#                    <div class="visible-tablet"><a id="mainTitle" href="index.html"><span style="color:#eb8a40">A</span>ptitude</a></div>#}
+
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li {% if page == 'index' %} class="active" {% endif %}><a
+                                    href="{% url 'landing:index' %}">{{ _('Home') }}</a></li>
+                            <li {% if page == 'product' %} class="active" {% endif %}><a
+                                    href="{% url 'landing:product' %}">{{ _('Product') }}</a></li>
+                            <li {% if page == 'consulting' %} class="active" {% endif %}><a
+                                    href="{% url 'landing:consulting' %}">{{ _('Consulting') }}</a></li>
+                            <li {% if page == 'solutions' %} class="active" {% endif %}><a
+                                    href="{% url 'landing:solutions' %}">{{ _('Benefits') }}</a></li>
+                            <li {% if page == 'book' %} class="active" {% endif %}><a
+                                    href="{% url 'landing:book' %}">{{ _('Book') }}</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div id="templatemo_menu">
-                <ul>
-                    <li>
-                        <a {% if page == 'book' %} class="current" {% endif %} id="book_button"
-                                                   href="{% url 'landing:book' %}">{{ _('Book') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a {% if page == 'solutions' %} class="current" {% endif %}
-                                                        href="{% url 'landing:solutions' %}">{{ _('Benefits') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a {% if page == 'consulting' %} class="current" {% endif %}
-                                                         href="{% url 'landing:consulting' %}">{{ _('Consulting') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a {% if page == 'product' %} class="current" {% endif %}
-                                                      href="{% url 'landing:product' %}">{{ _('Product') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a {% if page == 'index' %} class="current" {% endif %}
-                                                    href="{% url 'landing:index' %}">{{ _('Home') }}
-                        </a>
-                    </li>
-                </ul>
-                <div class="cleaner"></div>
-            </div>
-
-            <div class="cleaner"></div>
         </div>
     </div>
 </div>
