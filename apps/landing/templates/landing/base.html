@@ -43,11 +43,15 @@
                         <span class="icon-bar"></span>
                     </a>
 
-                    <a class="brand" href="index.html"><img
+                    <a class="brand" href="{% url 'landing:index' %}"><img
                             src="{% static 'landing/img/aptitude/logo-only-small.png' %}" alt="Aptitude"></a>
 
-                    <div class="visible-desktop"><a id="mainTitle" href="index.html"><span
-                            style="color:#eb8a40">A</span>ptitude</a></div>
+                    <div class="visible-desktop">
+                        <a id="mainTitle" href="{% url 'landing:index' %}">
+                            <span style="color:#eb8a40">A</span>ptitude
+                            <span style="color:#eb8a40">W</span>orld
+                        </a>
+                    </div>
                     {#                    <div class="visible-tablet"><a id="mainTitle" href="index.html"><span style="color:#eb8a40">A</span>ptitude</a></div>#}
 
                     <div class="nav-collapse collapse">
@@ -72,30 +76,28 @@
 
 {% block content %}{% endblock %}
 
-<div id="templatemo_footer_wrapper">
-    <div id="templatemo_footer">
+<div class="footer">
+    <div class="container" id="cFooter">
+        <div class="row">
+            <div class="span10 offset1">
+                <a href="https://www.facebook.com/aptitude.worldau">
+                    <img id="facebook" src="{% static 'landing/img/aptitude/trans.png' %}" alt="facebook"/>
+                </a>
+                <a href="https://twitter.com/aptitudeworldau">
+                    <img id="twitter" src="{% static 'landing/img/aptitude/trans.png' %}" alt="twitter"/>
+                </a>
+                <a href="mailto:info@aptitudeworld.com.au?cc=fenty@aptitudeworld.com.au&cc=vincentchu@vinolea.com.au">
+                    <img id="email" src="{% static 'landing/img/aptitude/trans.png' %}" alt="email"/>
+                </a>
+                <br><br>
 
-        <div class="footer_title" style="position: relative; left: 393px">
-            <a href="https://www.facebook.com/aptitude.worldau">
-                <img id="facebook" src="{% static 'landing/img/aptitude/trans.png' %}" alt="facebook"/>
-            </a>
-            <a href="https://twitter.com/aptitudeworldau">
-                <img id="twitter" src="{% static 'landing/img/aptitude/trans.png' %}" alt="twitter"/>
-            </a>
-            <a href="mailto:info@aptitudeworld.com.au?cc=fenty@aptitudeworld.com.au&cc=vincentchu@vinolea.com.au">
-                <img id="email" src="{% static 'landing/img/aptitude/trans.png' %}" alt="email"/>
-            </a>
+                <div id="copyright">
+                    1300 88 78 71<br/>
+                    Copyright © {{ year }} Aptitude World ANZ
+                </div>
+            </div>
         </div>
-
-        <div class="cleaner"></div>
     </div>
-    <!-- end of footer -->
-
-    <div id="copyright">
-        1300 88 78 71<br/>
-        Copyright © {{ year }} Aptitude World ANZ
-    </div>
-    <!-- end of templatemo_footer -->
 </div>
 <!-- end of footer wrapper -->
 </body>

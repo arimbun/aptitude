@@ -2,28 +2,16 @@
 {% load staticfiles %}
 
 {% block content %}
-    <div id="templatemo_body_wrapper">
-        <div id="templatemo_wrapper">
-            <div id="templatemo_main">
-
-                <div class="col_w960">
+    <div class="row" style="background-color:#ffffff">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1" id="content1">
+                    <br>
                     <p>Unfortunately, something went wrong when processing your booking. Please click <a
                             href="{% url 'landing:book' %}">here</a> to return to the booking page.</p>
-
-                    <div class="cleaner"></div>
                 </div>
-                <!-- end of templatemo fp services -->
-
-                <div class="col_w960 col_w960_last"></div>
-                <div class="cleaner"></div>
             </div>
-            <!-- end of main -->
-
-            <div class="cleaner"></div>
         </div>
-        <!-- end of wrapper -->
-        <div class="cleaner"></div>
     </div>
-    <!-- end of body wrapper -->
 {% endblock %}
 

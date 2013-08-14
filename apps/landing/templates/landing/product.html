@@ -60,14 +60,15 @@
     </div>
 
 
-    <div id="templatemo_body_wrapper">
-        <div id="templatemo_wrapper">
-            <div id="templatemo_main">
-                <div id="slideshow" class="pics">
-                    <img src="{% static 'landing/img/banners/knowing-your-potential.jpg' %}" width="960" height="350"/>
-                </div>
+    <div class="row" style="background-color:#ffffff">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1" id="content1">
+                    <div id="slideshow" class="pics">
+                        <img src="{% static 'landing/img/banners/knowing-your-potential.jpg' %}" width="960"
+                             height="350"/>
+                    </div>
 
-                <div class="col_w960">
                     <h2>Introduction to Dermatoglyphics Technology</h2>
 
                     <p>
@@ -120,11 +121,19 @@
 
                     <a href="#">The Benefits Of Dermatoglyphics Technology</a>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="col_w960">
+
+
+    <div class="row" style="background-color:#d9ceb2">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1" id="content2" style="min-height:400px;">
                     <h2>How does it work?</h2>
 
-                    <img src="{% static 'landing/img/aptitude/product.png' %}" style="margin: 10px 0 15px 0"
+                    <img src="{% static 'landing/img/aptitude/product_trans.png' %}" style="margin: 10px 0 15px 0"
                          alt="How does it work?"/>
 
                     <p>
@@ -132,21 +141,9 @@
                         <a href="{% url 'landing:consulting' %}">Consultation</a> of the report shall be conducted by
                         qualified Dermatoglyphics Consultant.
                     </p>
-
-                    <div class="cleaner"></div>
                 </div>
-                <!-- end of templatemo fp services -->
-
-                <div class="col_w960 col_w960_last"></div>
-                <div class="cleaner"></div>
             </div>
-            <!-- end of main -->
-
-            <div class="cleaner"></div>
         </div>
-        <!-- end of wrapper -->
-        <div class="cleaner"></div>
     </div>
-    <!-- end of body wrapper -->
 {% endblock %}
 

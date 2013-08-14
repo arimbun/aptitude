@@ -3,14 +3,14 @@
 
 {% block content %}
     <input type="hidden" name="environment" value="{{ environment }}"/>
-    <div id="templatemo_body_wrapper">
-        <div id="templatemo_wrapper">
-            <div id="templatemo_main">
-
-                <div class="col_w960">
+    <div class="row" style="background-color:#ffffff">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1" id="content1" >
+                	<br>
                     <p>To book an appointment with one of our consultants, please fill in the form below.</p>
 
-                    <form action="/book/confirm" method="post">
+                    <form class="form-horizontal" action="/book/confirm" method="post">
                         {% csrf_token %}
 
                         <h3>Personal Details</h3>
@@ -26,21 +26,9 @@
 
                         <input type="submit" value="Review Booking"/>
                     </form>
-                    <div class="cleaner"></div>
-
                 </div>
-                <!-- end of templatemo fp services -->
-
-                <div class="col_w960 col_w960_last"></div>
-                <div class="cleaner"></div>
             </div>
-            <!-- end of main -->
-
-            <div class="cleaner"></div>
         </div>
-        <!-- end of wrapper -->
-        <div class="cleaner"></div>
     </div>
-    <!-- end of body wrapper -->
 {% endblock %}
 

@@ -3,11 +3,11 @@
 
 {% block content %}
     <input type="hidden" name="environment" value="{{ environment }}"/>
-    <div id="templatemo_body_wrapper">
-        <div id="templatemo_wrapper">
-            <div id="templatemo_main">
-
-                <div class="col_w960">
+    <div class="row" style="background-color:#ffffff">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1" id="content1">
+                    <br>
                     <p>Thank you for booking an appointment with us! An email has been sent to your nominated email
                         address for confirmation.</p>
 
@@ -27,21 +27,9 @@
                                 data-tax="0"
                                 data-env="sandbox"></script>
                     </div>
-
-                    <div class="cleaner"></div>
                 </div>
-                <!-- end of templatemo fp services -->
-
-                <div class="col_w960 col_w960_last"></div>
-                <div class="cleaner"></div>
             </div>
-            <!-- end of main -->
-
-            <div class="cleaner"></div>
         </div>
-        <!-- end of wrapper -->
-        <div class="cleaner"></div>
     </div>
-    <!-- end of body wrapper -->
 {% endblock %}
 

@@ -7,6 +7,17 @@
  */
 
 $(document).ready(function () {
+    /**
+     * Twitter bootstrap compatibility.
+     */
+    $('label').attr('class', 'control-label');
+    $('input').wrap('<div class="controls" />');
+    $('select').wrap('<div class="controls" />');
+    $('textarea').wrap('<div class="controls" />');
+
+    /**
+     * Overlays.
+     */
     $('a[rel]').overlay({
         fixed: false
     });
