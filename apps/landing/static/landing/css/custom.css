@@ -95,6 +95,7 @@ td img {
 .navbar .nav>li>a {
     text-shadow: none;
     margin-top: 5px;
+    font-size: 14px;
 }
 
 .navbar .brand {
@@ -276,7 +277,7 @@ img#email {
 #slideshow {
     position: relative;
     overflow: hidden;
-    margin-top: -51px;
+    margin-top: -11px;
     margin-bottom: 20px;
 }
 
