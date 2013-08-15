@@ -6,9 +6,17 @@
     <div class="row" style="background-color:#ffffff">
         <div class="container">
             <div class="row">
-                <div class="span10 offset1" id="content1" >
-                	<br>
-                    <p>To book an appointment with one of our consultants, please fill in the form below.</p>
+                <div class="span10 offset1" id="content1">
+                    <br>
+
+                    <p>
+                        To book an appointment with one of our consultants, please fill in the form below.
+                    </p>
+
+                    <p>
+                        <strong>Note:</strong> Aptitude World is only able to service Sydney area at this moment. We
+                        apologise for the inconvenience.
+                    </p>
 
                     <form class="form-horizontal" action="/book/confirm" method="post">
                         {% csrf_token %}
