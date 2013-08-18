@@ -191,8 +191,8 @@ def confirm_booking(request):
 
 def book_success(request):
     if request.method == 'POST':
-        environment = os.environ['ENVIRONMENT']
-        # environment = 'production'
+        # environment = os.environ['ENVIRONMENT']
+        environment = 'production'
         # get form data
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
