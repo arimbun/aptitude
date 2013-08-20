@@ -10,7 +10,7 @@ State: %s
 Postcode: %s
 Country: %s
 Booking type: %s
-Data scanning appointment: %s (A consultant will contact you to advise the appointment time)
+Data scanning appointment: %s (A consultant will contact you to discuss the appointment time)
 Total Price: %s
 Deposit Paid: %s
 Total Owing: %s

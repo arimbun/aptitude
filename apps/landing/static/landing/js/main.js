@@ -61,7 +61,7 @@ $(document).ready(function () {
     $.noConflict();
     $('#id_appointment_date').datepicker({
         dateFormat: 'dd/mm/yy',
-        minDate: new Date()
+        minDate: 2
     });
 });
 

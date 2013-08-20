@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
 from django import forms
-import os
 
 COMPANY_NAME = 'Aptitude World ANZ'
 META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Australia', 'Aptitude World New Zealand']
@@ -26,12 +25,12 @@ class PersonalForm(forms.Form):
 class BookingForm(forms.Form):
     booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
     appointment_date = forms.DateField(input_formats=['%d/%m/%Y'])
-    message_to_our_consultant = forms.CharField(widget=forms.Textarea)
+    message_to_our_consultant = forms.CharField(widget=forms.Textarea, required=False, label="Message to our consultant (optional)")
 
 
 class PaymentForm(forms.Form):
     amount = forms.ChoiceField(
-        choices=[('50 AUD', 'AU$50'), ('100 AUD', 'AU$100'), ('Full', 'Full')])
+        choices=[('50 AUD', 'AU$50'), ('Full', 'Full')])
 
 
 def index(request):
