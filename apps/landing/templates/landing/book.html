@@ -28,15 +28,92 @@
                         {% csrf_token %}
 
                         <h3>Personal Details</h3>
-                        {{ personal_form.as_p }}
+
+                        <div class="form-field">
+                            {{ booking_form.email_address.errors }}
+                            <label for="id_email_address">Email address:</label>
+                            {{ booking_form.email_address }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.first_name.errors }}
+                            <label for="id_first_name">First name:</label>
+                            {{ booking_form.first_name }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.last_name.errors }}
+                            <label for="id_last_name">Last name:</label>
+                            {{ booking_form.last_name }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.contact_number.errors }}
+                            <label for="id_contact_number">Contact number:</label>
+                            {{ booking_form.contact_number }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.address.errors }}
+                            <label for="id_address">Address:</label>
+                            {{ booking_form.address }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.suburb.errors }}
+                            <label for="id_suburb">Suburb:</label>
+                            {{ booking_form.suburb }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.state.errors }}
+                            <label for="id_state">State:</label>
+                            {{ booking_form.state }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.postcode.errors }}
+                            <label for="id_postcode">Postcode:</label>
+                            {{ booking_form.postcode }}
+                        </div>
+
+                        <div class="form-field" style="clear: both">
+                            {{ booking_form.country.errors }}
+                            <label for="id_country">Country:</label>
+                            {{ booking_form.country }}
+                        </div>
+
 
                         <h3>Booking Details</h3>
-                        {{ booking_form.as_p }}
+
+                        <div class="form-field">
+                            {{ booking_form.booking_type.errors }}
+                            <label for="id_booking_type">Booking type:</label>
+                            {{ booking_form.booking_type }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.appointment_date.errors }}
+                            <label for="id_appointment_date">Appointment date:</label>
+                            {{ booking_form.appointment_date }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.message_to_our_consultant.errors }}
+                            <label for="id_message_to_our_consultant">Message to our consultant (optional):</label>
+                            {{ booking_form.message_to_our_consultant }}
+                        </div>
 
                         <h3>Payment Details</h3>
 
                         <p>You may choose to pay the booking amount in deposit or full.</p>
-                        {{ payment_form.as_p }}
+
+                        <div class="form-field">
+                            {{ booking_form.amount.errors }}
+                            <label for="id_amount">Amount:</label>
+                            {{ booking_form.amount }}
+                        </div>
+
 
                         <input type="submit" value="Review Booking"/>
                     </form>

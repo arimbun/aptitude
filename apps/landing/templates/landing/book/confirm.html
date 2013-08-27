@@ -102,8 +102,9 @@
                         <input type="hidden" name="total_amount" value="{{ total_amount }}">
                         <input type="hidden" name="deposit_amount" value="{{ deposit_amount }}">
                         <input type="hidden" name="owing_amount" value="{{ owing_amount }}">
-                        <input id="toc_agreement" type="checkbox" name="toc_agreement">
-                        <label for="toc_agreement">I agree to the <a href="{% url 'landing:toc' %}" target="_blank">terms
+                        <br>
+                        <input id="toc_agreement" type="checkbox" name="toc_agreement" style="float: left">
+                        <label style="margin-left: 30px">I agree to the <a href="{% url 'landing:toc' %}" target="_blank">terms
                             and conditions</a></label><br><br>
                         <input type="submit" name="book_submit" value="Submit">
                     </form>

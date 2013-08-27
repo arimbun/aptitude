@@ -1,15 +1,20 @@
+# sys.path.append('/opt/pycharm-2.7.3/helpers/pydev/')
+
 from apps.booking_types.models import BookingTypes
+
 from apps.landing.models import Landing
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.utils.datetime_safe import datetime
 from django import forms
 
+
 COMPANY_NAME = 'Aptitude World ANZ'
 META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Australia', 'Aptitude World New Zealand']
 
 
-class PersonalForm(forms.Form):
+class BookingForm(forms.Form):
+    # personal details section
     email_address = forms.EmailField()
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
@@ -21,14 +26,13 @@ class PersonalForm(forms.Form):
     # country = forms.ModelChoiceField(queryset=Country.objects.all())
     country = forms.ChoiceField(choices=[('Australia', 'Australia')])
 
-
-class BookingForm(forms.Form):
+    # booking details section
     booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
     appointment_date = forms.DateField(input_formats=['%d/%m/%Y'])
-    message_to_our_consultant = forms.CharField(widget=forms.Textarea, required=False, label="Message to our consultant (optional)")
+    message_to_our_consultant = forms.CharField(widget=forms.Textarea, required=False,
+                                                label="Message to our consultant (optional)")
 
-
-class PaymentForm(forms.Form):
+    # payment details section
     amount = forms.ChoiceField(
         choices=[('50 AUD', 'AU$50'), ('Full', 'Full')])
 
@@ -90,9 +94,8 @@ def consulting(request):
 
 
 def book(request):
-    personal_form = PersonalForm()
+    # pydevd.settrace('localhost', port=8001, stdoutToServer=True, stderrToServer=True)
     booking_form = BookingForm()
-    payment_form = PaymentForm()
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Book an Appointment'
 
@@ -103,33 +106,30 @@ def book(request):
                       'description': description,
                       'page': 'book',
                       'year': year,
-                      'personal_form': personal_form,
                       'booking_form': booking_form,
-                      'payment_form': payment_form,
                   }
     )
 
 
 def confirm_booking(request):
+    # pydevd.settrace('localhost', port=8001, stdoutToServer=True, stderrToServer=True)
     if request.method == 'POST':
         keywords, description, year = __init()
         title = COMPANY_NAME + ' - ' + 'Confirm Booking'
 
-        personal_form = PersonalForm(request.POST)
         booking_form = BookingForm(request.POST)
-        payment_form = PaymentForm(request.POST)
 
-        if personal_form.is_valid() and booking_form.is_valid() and payment_form.is_valid():
+        if booking_form.is_valid() and booking_form.is_valid() and booking_form.is_valid():
             # personal form data
-            first_name = personal_form.cleaned_data['first_name']
-            last_name = personal_form.cleaned_data['last_name']
-            email_address = personal_form.cleaned_data['email_address']
-            contact_number = personal_form.cleaned_data['contact_number']
-            address = personal_form.cleaned_data['address']
-            suburb = personal_form.cleaned_data['suburb']
-            postcode = personal_form.cleaned_data['postcode']
-            state = personal_form.cleaned_data['state']
-            country = personal_form.cleaned_data['country']
+            first_name = booking_form.cleaned_data['first_name']
+            last_name = booking_form.cleaned_data['last_name']
+            email_address = booking_form.cleaned_data['email_address']
+            contact_number = booking_form.cleaned_data['contact_number']
+            address = booking_form.cleaned_data['address']
+            suburb = booking_form.cleaned_data['suburb']
+            postcode = booking_form.cleaned_data['postcode']
+            state = booking_form.cleaned_data['state']
+            country = booking_form.cleaned_data['country']
 
             # booking form data
             booking_type = booking_form.cleaned_data['booking_type'].name
@@ -139,7 +139,7 @@ def confirm_booking(request):
             # payment form data
             total_price_amount = int(booking_form.cleaned_data['booking_type'].price)
             total_price_currency = booking_form.cleaned_data['booking_type'].currency
-            deposit_amount_raw = payment_form.cleaned_data['amount']
+            deposit_amount_raw = booking_form.cleaned_data['amount']
 
             # calculate deposit price
             if deposit_amount_raw == 'Full':
@@ -183,7 +183,15 @@ def confirm_booking(request):
                           }
             )
         else:
-            return HttpResponseRedirect('/book')
+            return render(request, 'landing/book.html',
+                          {
+                              'title': title,
+                              'keywords': keywords,
+                              'description': description,
+                              'page': 'book',
+                              'year': year,
+                              'booking_form': booking_form,
+                          })
     else:
         return HttpResponseRedirect('/book')
 
