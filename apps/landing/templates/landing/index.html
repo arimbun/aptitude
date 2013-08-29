@@ -2,15 +2,31 @@
 {% load staticfiles %}
 
 {% block content %}
+
+	<script>
+    	$(document).ready(function() {
+			$('#myCarousel').carousel();
+		});
+    </script>
+    
     <div class="row" style="background-color:#ffffff">
-        <div class="container">
+        <div class="container" style="padding-top:0px;">
             <div class="row">
                 <div class="span10 offset1" id="content1">
-                    <div id="slideshow" class="pics">
-                        <img src="{% static 'landing/img/banners/children.jpg' %}"/>
-                        <img src="{% static 'landing/img/banners/children1.jpg' %}"/>
-                    </div>
-
+                	<div id="myCarousel" class="carousel slide">
+                    
+                    <!-- Carousel items -->
+                      	<div class="carousel-inner">
+                        	<div class="active item">
+                        		<img src="{% static 'landing/img/banners/children.jpg' %}">
+                        	</div>
+                        
+                        	<div class="item">
+                            	<img src="{% static 'landing/img/banners/children1.jpg' %}">
+                            </div>
+                      	</div> 
+					</div> <!-- end of Div mycarousel-->
+                    
                     <h2>What is Aptitude World?</h2>
                     <br>
 
