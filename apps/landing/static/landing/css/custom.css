@@ -282,19 +282,28 @@ img#email {
 }
 
 .pics {
-    height: 350px;
-    width: 960px;
+    height: auto;
+    width: auto;
     padding: 0;
     margin: 0;
 }
 
 .pics img {
     background-color: #eee;
-    height: 350px;
-    width: 960px;
+    height: auto;
+    width: auto;
     top: 0;
     left: 0;
 }
+
+/* Change form focus color*/
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-    input:focus {
+    border-color: #eb8a40;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
 
 /**************************************
 * [end] rotating images
