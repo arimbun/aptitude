@@ -34,7 +34,7 @@ class BookingForm(forms.Form):
 
     # payment details section
     amount = forms.ChoiceField(
-        choices=[('50 AUD', 'AU$50'), ('Full', 'Full')])
+        choices=[('100 AUD', 'AU$100'), ('Full', 'Full')])
 
 
 def index(request):
@@ -133,7 +133,7 @@ def confirm_booking(request):
 
             # booking form data
             booking_type = booking_form.cleaned_data['booking_type'].name
-            appointment_date = booking_form.cleaned_data['appointment_date']
+            appointment_date = datetime.strptime(request.POST['id_appointment_date_post'], '%Y-%m-%d')
             message_to_our_consultant = booking_form.cleaned_data['message_to_our_consultant']
 
             # payment form data
@@ -175,7 +175,7 @@ def confirm_booking(request):
                               'postcode': postcode,
                               'country': country,
                               'booking_type': booking_type,
-                              'appointment_date': appointment_date,
+                              'appointment_date': datetime.strftime(appointment_date, '%A, %d %B %Y'),
                               'message_to_our_consultant': message_to_our_consultant,
                               'total_amount': total_price_str,
                               'deposit_amount': deposit_paid_str,
@@ -220,7 +220,7 @@ def book_success(request):
         # send confirmation email
         landing = Landing()
         reference_number = landing.generate_booking_reference_number(first_name, last_name)
-        landing.send_confirmation_email(
+        landing.save_booking(
             first_name=first_name,
             last_name=last_name,
             contact_number=contact_number,

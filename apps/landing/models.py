@@ -1,14 +1,81 @@
 from datetime import datetime
+from apps.booking_types.models import BookingTypes
+from apps.bookings.models import Booking
+from apps.countries.models import Country
+from apps.users.models import User
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.mail import BadHeaderError, EmailMultiAlternatives
 from django.db import models
-from django.http import HttpResponse
 import os
 
 
 class Landing(models.Model):
-    def send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
-                                message, address, suburb, state, country, postcode, appointment_date, total_price,
-                                deposit_paid, total_owing, booking_type):
+    def save_booking(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
+                     message, address, suburb, state, country, postcode, appointment_date, total_price,
+                     deposit_paid, total_owing, booking_type):
+        """
+        Saves the booking details into the database.
+        :param first_name:
+        :param last_name:
+        :param contact_number:
+        :param email_from:
+        :param email_to:
+        :param reference_number:
+        :param message:
+        :param address:
+        :param suburb:
+        :param state:
+        :param country:
+        :param postcode:
+        :param appointment_date:
+        :param total_price:
+        :param deposit_paid:
+        :param total_owing:
+        :param booking_type:
+        :return: True if successful, False otherwise
+        """
+        appointment_date_obj = datetime.strptime(appointment_date, '%A, %d %B %Y')
+
+        # if user exists, delete it
+        try:
+            existing_user = User.objects.get(email_address=email_to)
+            if not existing_user.administrator:
+                existing_user.first_name = first_name
+                existing_user.last_name = last_name
+                existing_user.contact_number = contact_number
+                existing_user.address = address
+                existing_user.suburb = suburb
+                existing_user.state = state
+                existing_user.postcode = country
+                existing_user.country = Country.objects.get(iso='AU')
+                existing_user.save()
+        except ObjectDoesNotExist:
+            pass
+
+        # save user detail
+        user = User(email_address=email_to, first_name=first_name, last_name=last_name, contact_number=contact_number,
+                    address=address, suburb=suburb, state=state, postcode=postcode, receive_newsletter=True,
+                    administrator=False, country=Country.objects.get(iso='AU'))
+        user.save()
+
+        # save booking detail
+        deposit_paid_arr = deposit_paid.split(' ')
+        deposit_paid_amount = float(deposit_paid_arr[0])
+        booking = Booking(reference_number=reference_number, appointment_date=appointment_date_obj,
+                          message_to_consultant=message, paid_amount=deposit_paid_amount, email_address=user,
+                          booking_type=BookingTypes.objects.get(name=booking_type))
+        booking.save()
+
+        # send confirmation email to user
+        self.__send_confirmation_email(first_name, last_name, contact_number, email_from, email_to, reference_number,
+                                       message, address, suburb, state, country, postcode, appointment_date,
+                                       total_price, deposit_paid, total_owing, booking_type)
+
+        return True
+
+    def __send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
+                                  message, address, suburb, state, country, postcode, appointment_date, total_price,
+                                  deposit_paid, total_owing, booking_type):
         """
         Sends a booking confirmation email to the customer.
 
@@ -29,7 +96,7 @@ class Landing(models.Model):
         :param deposit_paid:
         :param total_owing:
         :param booking_type:
-        :return:
+        :return: True if successful, False otherwise
         """
         title = 'Aptitude Assessment Booking Confirmation %s' % reference_number
         full_name = '%s %s' % (first_name, last_name)
@@ -47,12 +114,18 @@ class Landing(models.Model):
         )
 
         try:
-            email_message = EmailMultiAlternatives(title, email_txt, email_from,
-                                                   [email_to], ['info@aptitudeworld.com.au'])
+            email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to],
+                                                   ['info@aptitudeworld.com.au'])
+            # email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
             email_message.attach_alternative(email_html, 'text/html')
             email_message.send()
+
+            return True
         except BadHeaderError:
-            return HttpResponse('Invalid header found.')
+            # return HttpResponse('Invalid header found.')
+            return False
+        finally:
+            return True
 
     def generate_booking_reference_number(self, first_name, last_name):
         initials = first_name[:1].upper() + last_name[:1].upper()

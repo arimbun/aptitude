@@ -3,7 +3,6 @@ import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-os.environ['ENVIRONMENT'] = 'development'
 
 ADMINS = (
     ('Arthur Rimbun', 'anggiarto@gmail.com'),

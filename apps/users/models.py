@@ -14,9 +14,10 @@ class User(models.Model):
     postcode = models.CharField(max_length=20)
     country = models.ForeignKey(Country, db_column='country_iso')
     receive_newsletter = models.BooleanField()
-    created = models.DateTimeField()
-    modified = models.DateTimeField()
-    deleted = models.DateTimeField()
+    administrator = models.BooleanField()
+    created = models.DateTimeField(auto_now=True)
+    modified = models.DateTimeField(null=True)
+    deleted = models.DateTimeField(null=True)
 
 
     class Meta:

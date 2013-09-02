@@ -4,7 +4,6 @@ import dj_database_url
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-os.environ['ENVIRONMENT'] = 'production'
 
 ADMINS = (
     ('Arthur Rimbun', 'anggiarto@gmail.com'),
