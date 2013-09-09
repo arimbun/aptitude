@@ -129,7 +129,10 @@ INSTALLED_APPS = (
     # Apps:
     'apps.bookings',
     'apps.booking_types',
+    'apps.blog',
+    'apps.comments',
     'apps.countries',
+    'apps.inlines',
     'apps.landing',
     'apps.users',
 )
