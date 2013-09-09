@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'apps.countries',
     'apps.inlines',
     'apps.landing',
+    'apps.tools',
     'apps.users',
 )
 

@@ -1,6 +1,6 @@
 """
 >>> from django.test import Client
->>> from basic.blog.models import Post, Category
+>>> from apps.blog.models import Post, Category
 >>> import datetime
 >>> from django.core.urlresolvers import reverse
 >>> client = Client()

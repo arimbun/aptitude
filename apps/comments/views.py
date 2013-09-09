@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.comments.models import Comment
 
 from apps.comments.forms import CommentForm
-from basic.tools.shortcuts import render, redirect
+from apps.tools.shortcuts import render, redirect
 
 
 DELTA = datetime.datetime.now() - datetime.timedelta(
