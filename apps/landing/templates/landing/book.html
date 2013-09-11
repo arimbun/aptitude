@@ -27,13 +27,7 @@
                     <form class="form-horizontal" action="/book/confirm" method="post">
                         {% csrf_token %}
 
-                        <h3>Personal Details</h3>
-
-                        <div class="form-field">
-                            {{ booking_form.email_address.errors }}
-                            <label for="id_email_address">Email address:</label>
-                            {{ booking_form.email_address }}
-                        </div>
+                        <h3>Contact Details</h3>
 
                         <div class="form-field">
                             {{ booking_form.first_name.errors }}
@@ -45,6 +39,12 @@
                             {{ booking_form.last_name.errors }}
                             <label for="id_last_name">Last name:</label>
                             {{ booking_form.last_name }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ booking_form.email_address.errors }}
+                            <label for="id_email_address">Email address:</label>
+                            {{ booking_form.email_address }}
                         </div>
 
                         <div class="form-field">
@@ -107,7 +107,7 @@
 
                         <h3>Payment Details</h3>
 
-                        <p>You may choose to pay the booking amount in deposit or full.</p>
+                        <p>You may choose to pay the booking amount in deposit or in full.</p>
 
                         <div class="form-field">
                             {{ booking_form.amount.errors }}

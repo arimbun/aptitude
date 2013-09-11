@@ -34,7 +34,7 @@ class BookingForm(forms.Form):
 
     # payment details section
     amount = forms.ChoiceField(
-        choices=[('100 AUD', 'AU$100'), ('Full', 'Full')])
+        choices=[('50 AUD', 'AU$50'), ('Full', 'Full')])
 
 
 def index(request):
