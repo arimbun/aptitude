@@ -1,0 +1,19 @@
+{% extends 'landing/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row" style="background-color:#ffffff">
+        <div class="container" style="padding-top:10px;">
+            <div class="row">
+                <div class="span10 offset1" id="content1">
+                    {% for post in posts %}
+                        <h3>{{ post.title }}</h3>
+                        Posted by {{ post.author }} on {{ post.created }}<br><br>
+                        {{ post.body }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

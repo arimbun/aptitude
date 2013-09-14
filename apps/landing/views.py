@@ -1,4 +1,5 @@
 # sys.path.append('/opt/pycharm-2.7.3/helpers/pydev/')
+from apps.blog.models import Post
 
 from apps.booking_types.models import BookingTypes
 
@@ -282,6 +283,23 @@ def toc(request):
                                   'description': description,
                                   'page': 'toc',
                                   'year': year,
+                              }
+    )
+
+
+def blog(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Blog'
+
+    blog_posts = Post.objects.all()
+    return render_to_response('landing/blog.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'blog',
+                                  'year': year,
+                                  'posts': blog_posts,
                               }
     )
 
