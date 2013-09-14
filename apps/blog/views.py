@@ -62,7 +62,7 @@ post_archive_day.__doc__ = date_based.archive_day.__doc__
 
 def post_detail(request, slug, year, month, day, **kwargs):
     """
-    Displays post detail. If user is superuser, view will display 
+    Displays post detail. If user is superuser, view will display
     unpublished post detail for previewing purposes.
     """
     posts = None
