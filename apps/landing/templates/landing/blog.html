@@ -7,9 +7,10 @@
             <div class="row">
                 <div class="span10 offset1" id="content1">
                     {% for post in posts %}
-                        <h3>{{ post.title }}</h3>
-                        Posted by {{ post.author }} on {{ post.created }}<br><br>
-                        {{ post.body }}
+                        <h3 style="font-weight: bold; padding-top: 20px; line-height: 0px">{{ post.title }}</h3>
+                        <h6 style="font-weight: normal; font-style: italic;">Posted by {{ post.author }}
+                            on {{ post.created }}</h6>
+                        {{ post.body|linebreaks }}<br>
                     {% endfor %}
                 </div>
             </div>

@@ -24,36 +24,38 @@ class PostAdmin(admin.ModelAdmin):
         """
         admin.ModelAdmin.save_model(self, request, obj, form, change)
 
-        # send an email to all users in the system to notify them that a new post is available
-        title = 'Aptitude World ANZ - new post is available'
-        email_txt = """
-            Dear Customer,
+        # send an email if we are adding a new post
+        if not change:
+            # send an email to all users in the system to notify them that a new post is available
+            title = 'Aptitude World ANZ - new post is available'
+            email_txt = """
+                Dear Customer,
 
-            This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
+                This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
 
-            Regards,
-            Aptitude World ANZ
-        """
-        email_html = """
-            Dear Customer,
+                Regards,
+                Aptitude World ANZ
+            """
+            email_html = """
+                Dear Customer,
 
-            This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
+                This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
 
-            Regards,
-            Aptitude World ANZ
-        """
+                Regards,
+                Aptitude World ANZ
+            """
 
-        email_from = 'info@aptitudeworld.com.au'
-        email_to = 'anggiarto@gmail.com'
+            email_from = 'info@aptitudeworld.com.au'
+            email_to = 'anggiarto@gmail.com'
 
-        try:
-            # email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to],
-            #                                        ['info@aptitudeworld.com.au'])
-            email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
-            email_message.attach_alternative(email_html, 'text/html')
-            email_message.send()
-        except BadHeaderError:
-            pass
+            try:
+                # email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to],
+                #                                        ['info@aptitudeworld.com.au'])
+                email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
+                email_message.attach_alternative(email_html, 'text/html')
+                email_message.send()
+            except BadHeaderError:
+                pass
 
 
 admin.site.register(Post, PostAdmin)
