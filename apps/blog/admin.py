@@ -1,3 +1,4 @@
+import apps
 from django.contrib import admin
 from apps.blog.models import *
 from django.core.mail import EmailMultiAlternatives
@@ -28,32 +29,34 @@ class PostAdmin(admin.ModelAdmin):
         if not change:
             # send an email to all users in the system to notify them that a new post is available
             title = 'Aptitude World ANZ - new post is available'
-            email_txt = """
-                Dear Customer,
-
-                This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
-
-                Regards,
-                Aptitude World ANZ
-            """
-            email_html = """
-                Dear Customer,
-
-                This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
-
-                Regards,
-                Aptitude World ANZ
-            """
-
             email_from = 'info@aptitudeworld.com.au'
-            email_to = 'anggiarto@gmail.com'
 
             try:
-                # email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to],
-                #                                        ['info@aptitudeworld.com.au'])
-                email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
-                email_message.attach_alternative(email_html, 'text/html')
-                email_message.send()
+                # get all user emails in the database
+                users = apps.users.models.User.objects.all()
+                for u in users:
+                    email_to = u.email_address
+
+                    email_txt = """
+                        Dear Customer,
+
+                        This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
+
+                        Regards,
+                        Aptitude World ANZ
+                    """
+                    email_html = """
+                        Dear Customer,
+
+                        This is a courtesy email to inform you that a new post is now available to view on our website on the following URL:
+
+                        Regards,
+                        Aptitude World ANZ
+                    """
+
+                    email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
+                    email_message.attach_alternative(email_html, 'text/html')
+                    email_message.send()
             except BadHeaderError:
                 pass
 
