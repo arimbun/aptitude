@@ -33,18 +33,18 @@
                             <td>Suburb</td>
                             <td>{{ suburb }}</td>
                         </tr>
-                        <tr>
-                            <td>State</td>
-                            <td>{{ state }}</td>
-                        </tr>
+                        {#                        <tr>#}
+                        {#                            <td>State</td>#}
+                        {#                            <td>{{ state }}</td>#}
+                        {#                        </tr>#}
                         <tr>
                             <td>Postcode</td>
                             <td>{{ postcode }}</td>
                         </tr>
-                        <tr>
-                            <td>Country</td>
-                            <td>{{ country }}</td>
-                        </tr>
+                        {#                        <tr>#}
+                        {#                            <td>Country</td>#}
+                        {#                            <td>{{ country }}</td>#}
+                        {#                        </tr>#}
                     </table>
 
                     <h4>Booking Details</h4>
@@ -104,7 +104,8 @@
                         <input type="hidden" name="owing_amount" value="{{ owing_amount }}">
                         <br>
                         <input id="toc_agreement" type="checkbox" name="toc_agreement" style="float: left">
-                        <label style="margin-left: 30px">I agree to the <a href="{% url 'landing:toc' %}" target="_blank">terms
+                        <label style="margin-left: 30px">I agree to the <a href="{% url 'landing:toc' %}"
+                                                                           target="_blank">terms
                             and conditions</a></label><br><br>
                         <input type="submit" name="book_submit" value="Submit">
                     </form>

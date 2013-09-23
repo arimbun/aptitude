@@ -101,7 +101,8 @@ class Landing(models.Model):
         title = 'Aptitude Assessment Booking Confirmation %s' % reference_number
         full_name = '%s %s' % (first_name, last_name)
 
-        confirmation_email_html = open(os.getcwd() + '/apps/landing/templates/landing/email/confirmation_email.html', 'r')
+        confirmation_email_html = open(os.getcwd() + '/apps/landing/templates/landing/email/confirmation_email.html',
+                                       'r')
         email_html = confirmation_email_html.read() % (
             reference_number, full_name, contact_number, email_to, address, suburb, state, postcode, country,
             booking_type, appointment_date, total_price, deposit_paid, total_owing, message

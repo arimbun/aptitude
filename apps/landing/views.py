@@ -1,4 +1,9 @@
-# sys.path.append('/opt/pycharm-2.7.3/helpers/pydev/')
+
+import sys
+sys.path.append('/opt/pycharm-2.7.3/helpers/pydev/')
+import pydevd
+
+
 from apps.blog.models import Post
 
 from apps.booking_types.models import BookingTypes
@@ -120,7 +125,7 @@ def confirm_booking(request):
 
         booking_form = BookingForm(request.POST)
 
-        if booking_form.is_valid() and booking_form.is_valid() and booking_form.is_valid():
+        if booking_form.is_valid():
             # personal form data
             first_name = booking_form.cleaned_data['first_name']
             last_name = booking_form.cleaned_data['last_name']
