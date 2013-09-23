@@ -1,0 +1,6 @@
+Dear %s,
+
+This is a courtesy email to inform you that "%s" is now available to view on our website. Please visit %s for more details.
+
+Regards,
+Aptitude World ANZ
