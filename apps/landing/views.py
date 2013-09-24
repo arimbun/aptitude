@@ -1,7 +1,7 @@
 
 import sys
-sys.path.append('/opt/pycharm-2.7.3/helpers/pydev/')
-import pydevd
+#sys.path.append('/opt/pycharm-2.7.3/helpers/pydev/')
+#import pydevd
 
 
 from apps.blog.models import Post
