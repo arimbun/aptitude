@@ -8,6 +8,11 @@
 
 }
 
+table td, table th {
+    line-height: 8px;
+    padding: 5px 5px 5px 5px;
+}
+
 select {
     width: 314px;
 }
