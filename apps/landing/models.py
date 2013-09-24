@@ -104,13 +104,17 @@ class Landing(models.Model):
         confirmation_email_html = open(os.getcwd() + '/apps/landing/templates/landing/email/confirmation_email.html',
                                        'r')
         email_html = confirmation_email_html.read() % (
-            reference_number, full_name, contact_number, email_to, address, suburb, state, postcode, country,
+            # reference_number, full_name, contact_number, email_to, address, suburb, state, postcode, country,
+            # booking_type, appointment_date, total_price, deposit_paid, total_owing, message
+            reference_number, full_name, contact_number, email_to, address, suburb, postcode,
             booking_type, appointment_date, total_price, deposit_paid, total_owing, message
         )
 
         confirmation_email_txt = open(os.getcwd() + '/apps/landing/templates/landing/email/confirmation_email.txt', 'r')
         email_txt = confirmation_email_txt.read() % (
-            reference_number, full_name, contact_number, email_to, address, suburb, state, postcode, country,
+            # reference_number, full_name, contact_number, email_to, address, suburb, state, postcode, country,
+            # booking_type, appointment_date, total_price, deposit_paid, total_owing, message
+            reference_number, full_name, contact_number, email_to, address, suburb, postcode,
             booking_type, appointment_date, total_price, deposit_paid, total_owing, message
         )
 

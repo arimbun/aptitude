@@ -6,9 +6,7 @@ Contact Number: %s
 Email Address: %s
 Address: %s
 Suburb: %s
-State: %s
 Postcode: %s
-Country: %s
 Booking type: %s
 Data scanning appointment: %s (A consultant will contact you to discuss the appointment time)
 Total Price: %s

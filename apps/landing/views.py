@@ -27,10 +27,10 @@ class BookingForm(forms.Form):
     contact_number = forms.CharField(max_length=100)
     address = forms.CharField(max_length=150)
     suburb = forms.CharField(max_length=50)
-    state = forms.ChoiceField(choices=[('NSW', 'New South Wales')])
+    # state = forms.ChoiceField(choices=[('NSW', 'New South Wales')])
     postcode = forms.CharField(max_length=4)
     # country = forms.ModelChoiceField(queryset=Country.objects.all())
-    country = forms.ChoiceField(choices=[('Australia', 'Australia')])
+    # country = forms.ChoiceField(choices=[('Australia', 'Australia')])
 
     # booking details section
     booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
@@ -134,8 +134,10 @@ def confirm_booking(request):
             address = booking_form.cleaned_data['address']
             suburb = booking_form.cleaned_data['suburb']
             postcode = booking_form.cleaned_data['postcode']
-            state = booking_form.cleaned_data['state']
-            country = booking_form.cleaned_data['country']
+            # state = booking_form.cleaned_data['state']
+            # country = booking_form.cleaned_data['country']
+            state = request.POST['state']
+            country = request.POST['country']
 
             # booking form data
             booking_type = booking_form.cleaned_data['booking_type'].name
