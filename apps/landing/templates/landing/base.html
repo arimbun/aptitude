@@ -44,18 +44,21 @@
                         <span class="icon-bar"></span>
                     </a>
 
-                    <a class="brand" href="{% url 'landing:index' %}"><img
-                            src="{% static 'landing/img/aptitude/logo-only-small.png' %}" alt="Aptitude"></a>
 
-                    <div class="visible-desktop">
-                        <a id="mainTitle" href="{% url 'landing:index' %}">
-                            <span style="color:#eb8a40">A</span>ptitude
-                            <span style="color:#eb8a40">W</span>orld
+                    <div id="company-logo" class="visible-desktop">
+                        <a href="{% url 'landing:index' %}">
+                            <img src="{% static 'landing/img/aptitude/aptitude_world_logo.png' %}"/>
                         </a>
                     </div>
                     {#                    <div class="visible-tablet"><a id="mainTitle" href="index.html"><span style="color:#eb8a40">A</span>ptitude</a></div>#}
 
+                    <div class="contact-details-header">
+                        Ph: 1300 88 78 71
+                    </div>
+
                     <div class="nav-collapse collapse">
+
+
                         <ul class="nav">
                             <li {% if page == 'index' %} class="active" {% endif %}><a
                                     href="{% url 'landing:index' %}">{{ _('Home') }}</a></li>
@@ -93,7 +96,7 @@
                 <br><br>
 
                 <div id="copyright">
-                    1300 88 78 71<br/>
+                    Ph: 1300 88 78 71<br/>
                     Copyright © {{ year }} Aptitude World ANZ
                 </div>
             </div>

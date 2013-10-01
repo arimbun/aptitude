@@ -73,12 +73,21 @@ td img {
     max-width: 100%;
 }
 
-#mainTitle {
+/*#mainTitle {*/
+/*float: left;*/
+/*margin-top: 50px;*/
+/*font-family: titleFont;*/
+/*font-size: 60px;*/
+/*color: #d9ceb2;*/
+/*}*/
+
+#company-logo {
     float: left;
-    margin-top: 50px;
-    font-family: titleFont;
-    font-size: 60px;
-    color: #d9ceb2;
+}
+
+#company-logo img {
+    padding: 0;
+    margin: 15px 0 0 -15px;
 }
 
 @font-face {
@@ -86,13 +95,13 @@ td img {
     src: url('../fonts/HARNGTON.TTF');
 }
 
-#mainTitlePhone {
-    float: left;
-    margin-top: 40px;
-    font-family: Harrington;
-    font-size: 45px;
-    color: #d9ceb2;
-}
+/*#mainTitlePhone {*/
+/*float: left;*/
+/*margin-top: 40px;*/
+/*font-family: Harrington;*/
+/*font-size: 45px;*/
+/*color: #d9ceb2;*/
+/*}*/
 
 .navbar {
     min-height: 110px;
@@ -107,9 +116,15 @@ td img {
 }
 
 .navbar .nav {
-    padding-top: 35px;
+    padding-top: 0;
     margin: 0;
     font-size: 13px;
+}
+
+.navbar .contact-details-header {
+    color: #ffffff;
+    float: right;
+    margin: 20px 15px 0 0;
 }
 
 .navbar .nav>li>a {
