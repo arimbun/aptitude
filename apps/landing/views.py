@@ -33,7 +33,7 @@ class BookingForm(forms.Form):
     # country = forms.ChoiceField(choices=[('Australia', 'Australia')])
 
     # booking details section
-    booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.all())
+    booking_type = forms.ModelChoiceField(queryset=BookingTypes.objects.order_by('name'))
     appointment_date = forms.DateField(input_formats=['%d/%m/%Y'])
     message_to_our_consultant = forms.CharField(widget=forms.Textarea, required=False,
                                                 label="Message to our consultant (optional)")
