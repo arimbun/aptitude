@@ -57,11 +57,11 @@
                     </div>
 
                     <div class="nav-collapse collapse">
-
-
                         <ul class="nav">
                             <li {% if page == 'index' %} class="active" {% endif %}><a
                                     href="{% url 'landing:index' %}">{{ _('Home') }}</a></li>
+                            <li {% if page == 'blog' %} class="active" {% endif %}><a
+                                    href="{% url 'landing:blog' %}">{{ _('Blog') }}</a></li>
                             <li {% if page == 'product' %} class="active" {% endif %}><a
                                     href="{% url 'landing:product' %}">{{ _('Product') }}</a></li>
                             <li {% if page == 'consulting' %} class="active" {% endif %}><a
