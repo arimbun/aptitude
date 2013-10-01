@@ -82,7 +82,7 @@ td img {
 /*}*/
 
 #company-logo {
-    float: left;
+    position: absolute;
 }
 
 #company-logo img {
@@ -116,15 +116,20 @@ td img {
 }
 
 .navbar .nav {
-    padding-top: 0;
-    margin: 0;
-    font-size: 13px;
+    position: relative;
+    top: 20px;
+    font-size: 12px;
 }
 
 .navbar .contact-details-header {
+    position: relative;
+    top: 20px;
+    left: 773px;
     color: #ffffff;
-    float: right;
-    margin: 20px 15px 0 0;
+}
+
+.navbar .nav>li {
+    line-height: 15px;
 }
 
 .navbar .nav>li>a {
