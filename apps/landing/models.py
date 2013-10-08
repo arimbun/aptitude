@@ -67,13 +67,13 @@ class Landing(models.Model):
         booking.save()
 
         # send confirmation email to user
-        self.__send_confirmation_email(first_name, last_name, contact_number, email_from, email_to, reference_number,
+        self.send_confirmation_email(first_name, last_name, contact_number, email_from, email_to, reference_number,
                                        message, address, suburb, state, country, postcode, appointment_date,
                                        total_price, deposit_paid, total_owing, booking_type)
 
         return True
 
-    def __send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
+    def send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
                                   message, address, suburb, state, country, postcode, appointment_date, total_price,
                                   deposit_paid, total_owing, booking_type):
         """

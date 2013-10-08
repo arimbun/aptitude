@@ -1,0 +1,97 @@
+@media (max-width: 660px) {
+
+    body {
+        margin: 0 0 0 0;
+    }
+
+    td.middleContent {
+        background-image: url('../img/confirmation_email/treebg_660.jpg');
+        background-repeat: no-repeat;
+        height: 447px;
+    }
+
+    td.leftmiddleContent {
+        font-size: 18px;
+        padding: 20px 0 20px 45px;
+    }
+
+    td.rightmiddleContent {
+        display: none;
+    }
+
+    table.container {
+        width: 660px;
+        border: none;
+        margin: 0 0 0 0;
+
+    }
+
+    td.header {
+        background-image: url('../img/confirmation_email/header_660.jpg');
+        background-repeat: no-repeat;
+        height: 119px;
+    }
+}
+
+body {
+    margin: 0 0 0 0;
+
+}
+
+.container {
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px #888;
+    box-shadow: 0 0 5px #888;
+}
+
+.header {
+    background-image: url('../img/confirmation_email/header.jpg');
+    height: 184px;
+}
+
+.middleContent {
+    background-image: url('../img/confirmation_email/treebg.jpg');
+    height: 640px;
+}
+
+.leftmiddleContent {
+    text-align: left;
+    font-family: verdana;
+    font-size: 18px;
+    color: #7a6a53;
+    padding: 15px 0 15px 60px;
+}
+
+.rightmiddleContent {
+    padding: 15px 60px 15px 0;
+}
+
+.lowerContent {
+    background-color: #d9ceb2;
+    text-align: left;
+    font-family: verdana;
+    font-size: 18px;
+    padding: 25px 60px 25px 60px;
+
+}
+
+.footer {
+    background-color: #7a6a53;
+    text-align: left;
+    color: #FFF;
+    font-family: verdana;
+    font-size: medium;
+    padding: 25px 60px 25px 60px;
+    height: 70px;
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url('HARNGTON.TTF');
+}
+
+.header {
+    font-family: titleFont;
+    font-size: 65px;
+    color: #d9ceb2;
+}

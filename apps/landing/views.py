@@ -310,6 +310,11 @@ def blog(request):
                               }
     )
 
+def test_email(request):
+    landing = Landing()
+    landing.send_confirmation_email('arthur', 'rimbun', '0413751601', 'anggiarto@gmail.com', 'anggiarto@gmail.com',
+                                    'FA123', 'message', 'address', 'suburb', 'state', 'country', 'postcode',
+                                    'appointment date', '$500', '$100', '$400', 'booking type')
 
 def __init():
     keywords = ','.join(META_KEYWORDS)

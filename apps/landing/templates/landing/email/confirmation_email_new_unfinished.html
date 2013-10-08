@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Aptitude World - Email</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/email.css' %}"/>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+    <tr>
+        <td>
+            <table class="container" width="1024" align="center" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="header">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="middleContent">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="leftmiddleContent">
+                                    Dear Client
+
+                                    <br><br>
+
+                                    Thank you for booking your aptitude assessment online. We look forward to helping
+                                    you unveil your potentials. Below are the details for your booking.
+                                    <br><br>
+
+                                    <div style="padding-left:50px;">
+                                        Booking reference number %s <br>
+                                        Name %s <br>
+                                        Contact number %s <br>
+                                        Email address %s <br>
+                                        Address %s <br>
+                                        Suburb %s <br>
+                                        Postcode %s <br>
+                                        Booking type %s <br>
+                                        Data scanning appointment %s <br>
+                                        (A consultant will contact you to discuss the
+                                        appointment time) <br>
+                                        Total price %s <br>
+                                        Deposit paid %s <br>
+                                        Total owing %s <br>
+                                        Message to our consultant %s <br>
+                                    </div>
+
+
+                                    <br><br>
+                                    Please find our booking terms & conditions below for your reference.
+                                </td>
+
+                                <td class="rightmiddleContent">
+                                    <img src="{% static 'landing/img/confirmation_email/kid1.png' %}" width="161"
+                                         height="167" alt="Kid 1 "> <br>
+                                    <img src="{% static 'landing/img/confirmation_email/kid2.png' %}" width="161"
+                                         height="167" alt="Kid 2 "> <br>
+                                    <img src="{% static 'landing/img/confirmation_email/kid3.png' %}" width="161"
+                                         height="167" alt="Kid 3 ">
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="lowerContent">
+                        <strong>Terms and Conditions:</strong> <br><br>
+
+                        <strong>Payment of balance</strong><br>
+                        The outstanding balance is payable by the data scanning appointment time. We offer the following
+                        payment options:<br>
+                        <ol>
+                            <li>Direct bank transfer (preferred)<br>
+                                Account Name: Aptitude World <br>
+                                BSB: 032 257 <br>
+                                Account number: 391306 <br>
+                                <strong>NOTE: </strong> Please include the booking reference number and surname in your
+                                payment.
+                            </li>
+                            <li> Cash at the data scanning appointment (please provide the exact amount)</li>
+                        </ol>
+
+                        <br>
+                        <strong>Cancellation</strong>
+                        <br>
+                        Should you have to cancel your assessment, you must notify us at least 24 hour in advance. The
+                        deposit is not refundable but transferrable once only. Once biometric data is taken, no
+                        cancellation of service can be made.
+                        <br><br>
+                        <strong>Confidentiality</strong>
+                        <br>
+                        Your personal data is treated with utmost privacy and confidentiality. Once the aptitude report
+                        is generated, the biometric data is automatically deleted from the system. Aptitude World is not
+                        able to recreate or regenerate biometric data for any purpose.
+                        <br><br>
+                        <strong>Disclaimer</strong>
+                        <br>
+                        The undersigned has understood the nature of the service, agreed to subscribe to the said
+                        service and its consultation. Aptitude World does not make any representation, statement or
+                        remark to the undersigned on what the customer will or will not do based on the aptitude
+                        analysis. The analysis does not predict what the future holds. Aptitude World shall take its
+                        commitment in providing its service to the customer and no discrepancies shall be arised by
+                        either party after the consultation.
+                        <br><br><br>
+                        Kind Regards,
+                        <br><br><br>
+                        Aptitude World <br>
+                        Ph 1300 88 78 71 <br>
+                        info@aptitudeworld.com.au <br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="footer">
+                        Unsubscribe
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
