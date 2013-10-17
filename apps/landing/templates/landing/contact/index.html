@@ -1,0 +1,72 @@
+{% extends 'landing/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <input type="hidden" name="environment" value="{{ environment }}"/>
+    <div class="row" style="background-color:#ffffff">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1" id="content1">
+                    <br><br>
+
+                    <p>
+                        Give us a ring. We would love to chat with you.<br>
+                        Phone 1300 88 78 71<br><br>
+
+                        <b>OR</b><br><br> Drop us a line. We would love to hear from you.<br><br>
+                    </p>
+
+                    <form class="form-horizontal" action="/contact/submit" method="post">
+                        {% csrf_token %}
+
+                        <div class="form-field">
+                            {{ contact_form.first_name.errors }}
+                            <label for="id_first_name">First name:</label>
+                            {{ contact_form.first_name }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ contact_form.last_name.errors }}
+                            <label for="id_last_name">Last name:</label>
+                            {{ contact_form.last_name }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ contact_form.email_address.errors }}
+                            <label for="id_email_address">Email address:</label>
+                            {{ contact_form.email_address }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ contact_form.contact_number.errors }}
+                            <label for="id_contact_number">Contact number:</label>
+                            {{ contact_form.contact_number }}
+                        </div>
+
+                        <div class="form-field">
+                            {{ contact_form.message_to_our_consultant.errors }}
+                            <label for="id_message_to_our_consultant">Message to our consultant (optional):</label>
+                            {{ contact_form.message_to_our_consultant }}
+                        </div>
+
+                        <input type="submit" value="Submit"/>
+                    </form>
+
+                    <p>
+                        <b>OR</b><br><br>
+
+                        Email <a href="mailto:info@aptitudeworld.com.au?cc=fenty@aptitudeworld.com.au">info@aptitudeworld.com.au</a><br><br>
+
+                        <b>OR</b><br><br>
+
+                        PO BOX 78<br>
+                        Stanhope Gardens NSW 2768
+                    </p>
+
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

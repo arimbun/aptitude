@@ -68,14 +68,14 @@ class Landing(models.Model):
 
         # send confirmation email to user
         self.send_confirmation_email(first_name, last_name, contact_number, email_from, email_to, reference_number,
-                                       message, address, suburb, state, country, postcode, appointment_date,
-                                       total_price, deposit_paid, total_owing, booking_type)
+                                     message, address, suburb, state, country, postcode, appointment_date,
+                                     total_price, deposit_paid, total_owing, booking_type)
 
         return True
 
     def send_confirmation_email(self, first_name, last_name, contact_number, email_from, email_to, reference_number,
-                                  message, address, suburb, state, country, postcode, appointment_date, total_price,
-                                  deposit_paid, total_owing, booking_type):
+                                message, address, suburb, state, country, postcode, appointment_date, total_price,
+                                deposit_paid, total_owing, booking_type):
         """
         Sends a booking confirmation email to the customer.
 
@@ -123,6 +123,27 @@ class Landing(models.Model):
                                                    ['info@aptitudeworld.com.au'])
             # email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
             email_message.attach_alternative(email_html, 'text/html')
+            email_message.send()
+
+            return True
+        except BadHeaderError:
+            # return HttpResponse('Invalid header found.')
+            return False
+        finally:
+            return True
+
+    def send_contact_email(self, first_name, last_name, contact_number, email_from, email_to, message):
+        full_name = '%s %s' % (first_name, last_name)
+        title = 'Expression of Interest - %s' % full_name
+        confirmation_email_txt = open(os.getcwd() + '/apps/landing/templates/landing/email/contact_email.txt', 'r')
+        email_txt = confirmation_email_txt.read() % (
+            full_name, email_to, contact_number, message
+        )
+
+        try:
+            email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to],
+                                                   ['info@aptitudeworld.com.au'])
+            # email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
             email_message.send()
 
             return True

@@ -1,5 +1,3 @@
-
-import sys
 #sys.path.append('/opt/pycharm-2.7.3/helpers/pydev/')
 #import pydevd
 
@@ -41,6 +39,15 @@ class BookingForm(forms.Form):
     # payment details section
     amount = forms.ChoiceField(
         choices=[('50 AUD', 'AU$50'), ('Full', 'Full')])
+
+
+class ContactForm(forms.Form):
+    email_address = forms.EmailField()
+    first_name = forms.CharField(max_length=100)
+    last_name = forms.CharField(max_length=100)
+    contact_number = forms.CharField(max_length=100)
+    message_to_our_consultant = forms.CharField(widget=forms.Textarea, required=False,
+                                                label="Message to our consultant (optional)")
 
 
 def index(request):
@@ -115,6 +122,65 @@ def book(request):
                       'booking_form': booking_form,
                   }
     )
+
+
+def contact(request):
+    contact_form = ContactForm()
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Contact Us'
+
+    return render(request, 'landing/contact/index.html',
+                  {
+                      'title': title,
+                      'keywords': keywords,
+                      'description': description,
+                      'page': 'contact',
+                      'year': year,
+                      'contact_form': contact_form,
+                  }
+    )
+
+
+def contact_success(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Contact Us'
+
+    return render(request, 'landing/contact/success.html',
+                  {
+                      'title': title,
+                      'keywords': keywords,
+                      'description': description,
+                      'page': 'contact',
+                      'year': year,
+                  }
+    )
+
+
+def submit_contact(request):
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            # personal form data
+            first_name = contact_form.cleaned_data['first_name']
+            last_name = contact_form.cleaned_data['last_name']
+            email_address = contact_form.cleaned_data['email_address']
+            contact_number = contact_form.cleaned_data['contact_number']
+            message_to_our_consultant = contact_form.cleaned_data['message_to_our_consultant']
+
+            landing = Landing()
+            landing.send_contact_email(
+                first_name=first_name,
+                last_name=last_name,
+                contact_number=contact_number,
+                email_from='info@aptitudeworld.com.au',
+                email_to=email_address,
+                message=message_to_our_consultant)
+
+            return HttpResponseRedirect('/contact/success')
+        else:
+            return HttpResponseRedirect('/contact')
+    else:
+        return HttpResponseRedirect('/contact')
 
 
 def confirm_booking(request):
@@ -310,11 +376,13 @@ def blog(request):
                               }
     )
 
+
 def test_email(request):
     landing = Landing()
     landing.send_confirmation_email('arthur', 'rimbun', '0413751601', 'anggiarto@gmail.com', 'anggiarto@gmail.com',
                                     'FA123', 'message', 'address', 'suburb', 'state', 'country', 'postcode',
                                     'appointment date', '$500', '$100', '$400', 'booking type')
+
 
 def __init():
     keywords = ','.join(META_KEYWORDS)
