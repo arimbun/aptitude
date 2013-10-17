@@ -124,7 +124,7 @@ td img {
 .navbar .contact-details-header {
     position: relative;
     top: 20px;
-    left: 773px;
+    left: 750px;
     color: #ffffff;
 }
 
@@ -188,7 +188,7 @@ td img {
     background-color: #d9ceb2;
     text-align: left;
     height: auto;
-    min-height: 770px;
+    min-height: 300px;
     color: #000000;
 }
 
