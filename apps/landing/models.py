@@ -141,8 +141,7 @@ class Landing(models.Model):
         )
 
         try:
-            email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to],
-                                                   ['info@aptitudeworld.com.au'])
+            email_message = EmailMultiAlternatives(title, email_txt, email_from, ['info@aptitudeworld.com.au'])
             # email_message = EmailMultiAlternatives(title, email_txt, email_from, [email_to])
             email_message.send()
 
