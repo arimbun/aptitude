@@ -46,8 +46,7 @@ class ContactForm(forms.Form):
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
     contact_number = forms.CharField(max_length=100)
-    message_to_our_consultant = forms.CharField(widget=forms.Textarea, required=False,
-                                                label="Message to our consultant (optional)")
+    message_to_our_consultant = forms.CharField(widget=forms.Textarea, label="Message")
 
 
 def index(request):
