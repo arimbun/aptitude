@@ -124,7 +124,7 @@ td img {
 .navbar .contact-details-header {
     position: relative;
     top: 20px;
-    left: 750px;
+    left: 710px;
     color: #ffffff;
 }
 
@@ -150,7 +150,8 @@ td img {
 .navbar .nav>li>a {
     text-shadow: none;
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
+    /*font-weight: bold;*/
 }
 
 .navbar .brand {
