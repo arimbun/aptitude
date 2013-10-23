@@ -23,7 +23,7 @@ input, textarea {
 
 .container {
     font-size: 14px;
-    padding: 10px;
+    padding: 20px 10px 20px 10px;
 }
 
 #cFooter {
@@ -82,7 +82,7 @@ td img {
 /*}*/
 
 #company-logo {
-    position: absolute;
+    /*position: absolute;*/
 }
 
 #company-logo img {
@@ -105,53 +105,45 @@ td img {
 
 .navbar {
     min-height: 110px;
-}
-
-.navbar-inner {
-    background-color: #7a6a53; /* background color will be black for all browsers */
-    background-image: none;
-    background-repeat: no-repeat;
-    filter: none;
-    border: 0;
-}
-
-.navbar .nav {
-    position: relative;
-    top: 20px;
-    font-size: 12px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .navbar .contact-details-header {
     position: relative;
-    top: 20px;
+    top: -60px;
     left: 710px;
     color: #ffffff;
 }
 
+.navbar .nav {
+    margin-left: 55px;
+}
+
 .navbar .nav>li {
-    line-height: 15px;
+    line-height: 30px;
+    letter-spacing: -0.3px;
 }
 
 .navbar .nav>li>a {
-    color: #ffffff;
+    color: #4C4032;
+    background-color: #d9ceb2;
+    text-shadow: none;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: bold;
 }
 
 .navbar .nav>li>a:hover {
     color: #4C4032;
-    background-color: #d9ceb2;
+    background-color: #e5e5e5;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+    -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 }
 
 .navbar-inner a#mainTitle:hover {
     text-decoration: none;
     color: #eb8a40;
-
-}
-
-.navbar .nav>li>a {
-    text-shadow: none;
-    margin-top: 5px;
-    font-size: 12px;
-    /*font-weight: bold;*/
 }
 
 .navbar .brand {
@@ -159,6 +151,10 @@ td img {
 }
 
 .navbar-inner {
+    background-color: #7a6a53; /* background color will be black for all browsers */
+    background-image: none;
+    background-repeat: no-repeat;
+
     /*Make Navbar no color or shadow */
     background: none !important;
     border: 0 !important;
@@ -169,7 +165,7 @@ td img {
 /* Navigation active link background color*/
 .navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
     color: #4C4032;
-    background-color: #d9ceb2;
+    /*background-color: #d9ceb2;*/
 }
 
 .navbar .btn-navbar {
@@ -214,7 +210,7 @@ blockquote {
     font-style: italic;
 }
 
-blockquote div.author {
+div.author {
     font-weight: bold;
     text-align: right;
 }
@@ -378,3 +374,18 @@ ul.errorlist li {
 .form-field {
     margin-bottom: 15px;
 }
+
+.testimonial {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
+.testimonial .testimonial-image {
+
+}
+
+.testimonial .testimonial-message {
+
+}
+

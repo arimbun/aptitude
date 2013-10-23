@@ -23,6 +23,8 @@ urlpatterns = patterns(
     url(r'^solutions$', views.solutions, name='solutions'),
     # eg: /toc
     url(r'^toc$', views.toc, name='toc'),
+    # eg: /testimonials
+    url(r'^testimonials$', views.testimonials, name='testimonials'),
     # eg: /test_email
     url(r'^test_email$', views.test_email, name='test_email'),
     # eg: /contact

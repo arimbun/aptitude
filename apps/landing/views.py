@@ -376,6 +376,21 @@ def blog(request):
     )
 
 
+def testimonials(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Testimonials'
+
+    return render_to_response('landing/testimonials.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'testimonials',
+                                  'year': year,
+                              }
+    )
+
+
 def test_email(request):
     landing = Landing()
     landing.send_confirmation_email('arthur', 'rimbun', '0413751601', 'anggiarto@gmail.com', 'anggiarto@gmail.com',
