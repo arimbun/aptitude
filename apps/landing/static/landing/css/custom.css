@@ -23,7 +23,7 @@ input, textarea {
 
 .container {
     font-size: 14px;
-    padding: 20px 10px 20px 10px;
+    padding: 40px 10px 40px 10px;
 }
 
 #cFooter {
@@ -35,7 +35,7 @@ input, textarea {
 }
 
 body {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: Calibri, Arial, Verdana, Helvetica, sans-serif;
     background-color: #7a6a53;
 }
 
@@ -117,12 +117,12 @@ td img {
 }
 
 .navbar .nav {
-    margin-left: 55px;
+    margin-left: 80px;
 }
 
 .navbar .nav>li {
     line-height: 30px;
-    letter-spacing: -0.3px;
+    /*letter-spacing: -0.3px;*/
 }
 
 .navbar .nav>li>a {
@@ -268,9 +268,7 @@ p {
     text-align: center;
     height: auto;
     min-height: 115px;
-
     color: #ffffff;
-
 }
 
 img#facebook {
@@ -376,9 +374,9 @@ ul.errorlist li {
 }
 
 .testimonial {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
 }
 
 .testimonial .testimonial-image {
@@ -389,3 +387,7 @@ ul.errorlist li {
 
 }
 
+.img-centre {
+    display: block;
+    margin: 0 auto;
+}

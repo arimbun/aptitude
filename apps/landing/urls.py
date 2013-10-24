@@ -25,6 +25,8 @@ urlpatterns = patterns(
     url(r'^toc$', views.toc, name='toc'),
     # eg: /testimonials
     url(r'^testimonials$', views.testimonials, name='testimonials'),
+    # eg: /franchising
+    url(r'^franchising$', views.franchising, name='franchising'),
     # eg: /test_email
     url(r'^test_email$', views.test_email, name='test_email'),
     # eg: /contact

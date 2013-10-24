@@ -390,6 +390,19 @@ def testimonials(request):
                               }
     )
 
+def franchising(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Franchising'
+
+    return render_to_response('landing/franchising.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'franchising',
+                                  'year': year,
+                              }
+    )
 
 def test_email(request):
     landing = Landing()
