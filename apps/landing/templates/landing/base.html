@@ -54,24 +54,30 @@
 
                     <div class="contact-details-header">
                         <img src="{% static 'landing/img/phone.gif' %}">
-                        <b style="font-size: 16px">Call Now 1300 88 78 71</b>
+                        <b style="font-size: 18px">Call Now 1300 88 78 71</b>
                     </div>
 
                     <ul class="nav">
                         <li {% if page == 'index' %} class="active" {% endif %}><a
                                 href="{% url 'landing:index' %}">{{ _('HOME') }}</a></li>
                         <li {% if page == 'blog' %} class="active" {% endif %}><a
-                                href="{% url 'landing:blog' %}">{{ _('BLOG') }}</a></li>
-                        <li {% if page == 'product' %} class="active" {% endif %}><a
-                                href="{% url 'landing:product' %}">{{ _('PRODUCT') }}</a></li>
-                        <li {% if page == 'consulting' %} class="active" {% endif %}><a
-                                href="{% url 'landing:consulting' %}">{{ _('CONSULTING') }}</a></li>
-                        <li {% if page == 'solutions' %} class="active" {% endif %}><a
-                                href="{% url 'landing:solutions' %}">{{ _('BENEFITS') }}</a></li>
+                                href="{% url 'landing:dermatoglyphics' %}">{{ _('DERMATOGLYPHICS') }}</a></li>
                         <li {% if page == 'testimonials' %} class="active" {% endif %}><a
                                 href="{% url 'landing:testimonials' %}">{{ _('TESTIMONIALS') }}</a></li>
+                        {#                        <li {% if page == 'about_us' %} class="active" {% endif %}><a#}
+                        {#                                href="{% url 'landing:about_us' %}">{{ _('ABOUT_US') }}</a></li>#}
+                        <li {% if page == 'consulting' %} class="active" {% endif %}><a
+                                href="{% url 'landing:consulting' %}">{{ _('CONSULTING') }}</a></li>
+{#                        <li {% if page == 'report_content' %} class="active" {% endif %}><a#}
+{#                                href="{% url 'landing:report_content' %}">{{ _('REPORT CONTENT') }}</a></li>#}
+                        <li {% if page == 'faq' %} class="active" {% endif %}><a
+                                href="{% url 'landing:faq' %}">{{ _('FAQ') }}</a></li>
+{#                        <li {% if page == 'gallery' %} class="active" {% endif %}><a#}
+{#                                href="{% url 'landing:gallery' %}">{{ _('GALLERY') }}</a></li>#}
+                        <li {% if page == 'franchising' %} class="active" {% endif %}><a
+                                href="{% url 'landing:franchising' %}">{{ _('FRANCHISE') }}</a></li>
                         <li {% if page == 'contact' %} class="active" {% endif %}><a
-                                href="{% url 'landing:contact' %}">{{ _('CONTACT US') }}</a></li>
+                                href="{% url 'landing:contact' %}">{{ _('CONTACT') }}</a></li>
                     </ul>
                 </div>
             </div>

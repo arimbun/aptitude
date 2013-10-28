@@ -63,29 +63,15 @@ def index(request):
     )
 
 
-def product(request):
+def dermatoglyphics(request):
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Product'
-    return render_to_response('landing/product.html',
+    return render_to_response('landing/dermatoglyphics.html',
                               {
                                   'title': title,
                                   'keywords': keywords,
                                   'description': description,
                                   'page': 'product',
-                                  'year': year,
-                              }
-    )
-
-
-def solutions(request):
-    keywords, description, year = __init()
-    title = COMPANY_NAME + ' - ' + 'Solutions'
-    return render_to_response('landing/solutions.html',
-                              {
-                                  'title': title,
-                                  'keywords': keywords,
-                                  'description': description,
-                                  'page': 'solutions',
                                   'year': year,
                               }
     )
@@ -390,6 +376,7 @@ def testimonials(request):
                               }
     )
 
+
 def franchising(request):
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Franchising'
@@ -403,6 +390,22 @@ def franchising(request):
                                   'year': year,
                               }
     )
+
+def faq(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'FAQ'
+
+    return render_to_response('landing/faq.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'faq',
+                                  'year': year,
+                              }
+    )
+
+
 
 def test_email(request):
     landing = Landing()

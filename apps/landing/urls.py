@@ -17,10 +17,10 @@ urlpatterns = patterns(
     # url(r'^book/success$', views.book_success, name='book_success'),
     # eg: /consulting
     url(r'^consulting$', views.consulting, name='consulting'),
-    # eg: /product
-    url(r'^product$', views.product, name='product'),
-    # eg: /solutions
-    url(r'^solutions$', views.solutions, name='solutions'),
+    # eg: /dermatoglyphics
+    url(r'^dermatoglyphics$', views.dermatoglyphics, name='dermatoglyphics'),
+    # eg: /faq
+    url(r'^faq$', views.faq, name='faq'),
     # eg: /toc
     url(r'^toc$', views.toc, name='toc'),
     # eg: /testimonials

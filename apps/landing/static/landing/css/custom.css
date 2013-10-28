@@ -9,7 +9,6 @@
 }
 
 table td, table th {
-    line-height: 8px;
     padding: 5px 5px 5px 5px;
 }
 
@@ -22,12 +21,12 @@ input, textarea {
 }
 
 .container {
-    font-size: 14px;
-    padding: 40px 10px 40px 10px;
+    font-size: 18px;
+    padding: 20px 10px 40px 10px;
 }
 
 #cFooter {
-    font-size: 13px;
+    font-size: 18px;
 }
 
 #cNav {
@@ -37,6 +36,7 @@ input, textarea {
 body {
     font-family: Calibri, Arial, Verdana, Helvetica, sans-serif;
     background-color: #7a6a53;
+    line-height: 24px;
 }
 
 .carousel {
@@ -73,13 +73,9 @@ td img {
     max-width: 100%;
 }
 
-/*#mainTitle {*/
-/*float: left;*/
-/*margin-top: 50px;*/
-/*font-family: titleFont;*/
-/*font-size: 60px;*/
-/*color: #d9ceb2;*/
-/*}*/
+ul li {
+    line-height: 24px;
+}
 
 #company-logo {
     /*position: absolute;*/
@@ -95,14 +91,6 @@ td img {
     src: url('../fonts/HARNGTON.TTF');
 }
 
-/*#mainTitlePhone {*/
-/*float: left;*/
-/*margin-top: 40px;*/
-/*font-family: Harrington;*/
-/*font-size: 45px;*/
-/*color: #d9ceb2;*/
-/*}*/
-
 .navbar {
     min-height: 110px;
     margin-bottom: 0;
@@ -117,7 +105,7 @@ td img {
 }
 
 .navbar .nav {
-    margin-left: 80px;
+    margin-left: 5px;
 }
 
 .navbar .nav>li {
@@ -129,7 +117,7 @@ td img {
     color: #4C4032;
     background-color: #d9ceb2;
     text-shadow: none;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0;
     font-weight: bold;
 }
@@ -210,15 +198,11 @@ blockquote {
     font-style: italic;
 }
 
-div.author {
-    font-weight: bold;
-    text-align: right;
-}
-
 h2 {
     text-align: center;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
 }
 
 h3 {
@@ -226,6 +210,13 @@ h3 {
     font-size: 18px;
     font-weight: 500;
     padding-bottom: 10px;
+}
+
+h4 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0 10px 0;
 }
 
 #leftSect {
@@ -245,7 +236,8 @@ h3 {
 }
 
 p {
-    text-align: left;
+    /*text-align: left;*/
+    line-height: 24px;
 }
 
 #quote {
@@ -373,19 +365,47 @@ ul.errorlist li {
     margin-bottom: 15px;
 }
 
-.testimonial {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 13px;
+/************************
+* [begin] TESTIMONIALS
+************************/
+.testimonial-table {
+    display: table;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
-.testimonial .testimonial-image {
+.testimonial-table .testimonial-row {
+    display: table-row;
+    width: 100%;
+}
+
+.testimonial-table .testimonial-row .testimonial-image {
+    display: table-cell;
+    text-align: right;
+    padding-right: 20px;
+    width: 15%;
+}
+
+.testimonial-table .testimonial-row .testimonial-message {
+    display: table-cell;
+    width: 85%;
 
 }
 
-.testimonial .testimonial-message {
-
+.testimonial-table .testimonial-row .testimonial-message p {
+    /*padding: 10px 10px 10px 10px;*/
+    padding-bottom: 10px;
 }
+
+.testimonial-table .testimonial-row .testimonial-message .testimonial-author {
+    font-weight: bold;
+    text-align: right;
+}
+
+/************************
+* [end] TESTIMONIALS
+************************/
 
 .img-centre {
     display: block;
