@@ -73,6 +73,10 @@ td img {
     max-width: 100%;
 }
 
+ol li {
+    line-height: 24px;
+}
+
 ul li {
     line-height: 24px;
 }
@@ -194,7 +198,7 @@ ul li {
 }
 
 blockquote {
-    font-size: 12px;
+    font-size: 16px;
     font-style: italic;
 }
 
@@ -210,13 +214,14 @@ h3 {
     font-size: 18px;
     font-weight: 500;
     padding-bottom: 10px;
+    margin: 20px 0 20px 0;
 }
 
 h4 {
     text-align: left;
     font-size: 18px;
     font-weight: 700;
-    margin: 10px 0 10px 0;
+    margin: 20px 0 20px 0;
 }
 
 #leftSect {
