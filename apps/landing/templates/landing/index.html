@@ -10,9 +10,35 @@
     </script>
 
     <div class="row" style="background-color:#ffffff">
-        <div class="container" style="padding-top:0;">
+        <div class="container" style="padding-bottom: 0">
             <div class="row">
                 <div class="span10 offset1" id="content1">
+                    <h2>every CHILD deserves a GENIUS discovery</h2>
+
+                    <p>Aptitude World helps children and adults to unleash their potential with proven scientific
+                        methodology.</p>
+
+                    <p style="color: #cb8101;">At Aptitude World, we believe:</p>
+                    <ul style="color: #cb8101;">
+                        <li>Everyone is unique</li>
+                        <li>Everyone is talented</li>
+                        <li>Everyone is capable to excel</li>
+                    </ul>
+
+                    <p>Aptitude World is the first in Australia to introduce an aptitude assessment program that is non-
+                        invasive, no questionnaire involved, and can be done from 12 months of age. We utilise the
+                        latest version of <a href="{% url 'landing:dermatoglyphics' %}">Dermatoglyphics Test</a> to
+                        uncover the hidden talent of
+                        an individual with proven accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background-color:#d9ceb2">
+        <div class="container" style="padding-top:0; padding-bottom: 0">
+            <div class="row">
+                <div class="span10 offset1" id="content2">
                     <div id="myCarousel" class="carousel slide">
 
                         <!-- Carousel items -->
@@ -27,58 +53,76 @@
                         </div>
                     </div>
                     <!-- end of Div mycarousel-->
-
-                    <h2>Every child deserves a genius discovery</h2>
-
-                    <p>Aptitude World helps children and adults to unleash their potential with proven scientific
-                        methodology.</p>
-
-                    <p style="color: #cb8101;">At Aptitude World, we believe:</p>
-                    <ul style="color: #cb8101;">
-                        <li>Everyone is unique</li>
-                        <li>Everyone is talented</li>
-                        <li>Everyone is capable to excel</li>
-                    </ul>
-
-                    <p>Aptitude World is the first in Australia to introduce an aptitude assessment program that is non-
-                        invasive, no questionnaire involved, and can be done from 12 months of age. We utilise the
-                        latest version of <a href="{% url 'landing:dermatoglyphics' %}">Dermatoglyphics Test</a> to uncover the hidden talent of
-                        an individual with proven accuracy.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row" style="background-color:#d9ceb2">
+    <div class="row" style="background-color:#ffffff">
         <div class="container">
             <div class="row">
-                <div class="span10 offset1" id="content2">
-                    <div id="leftSect">
-                        <h2>Left Brain People</h2>
-                        <br>
+                <div class="span10 offset1" id="content3">
+                    <h2>Our clients’ testimonials</h2>
 
-                        <p>
-                            Guided by the left brain, theories suggest that left-brain people respond in sequential,
-                            logical ways and this group of people are strong in math and science, and can answer
-                            questions quickly. <br><br>"Most people in modern world operate as left-brain people due to
-                            the education system in school which focus on left brain training..."
-                        </p>
+                    <div class="testimonial-table">
+                        <div class="testimonial-row">
+                            {#            <div class="testimonial-image">#}
+                            {#                <img src="{% static 'landing/img/aptitude/testimonial2.jpg' %}">#}
+                            {#            </div>#}
+                            <div class="testimonial-message">
+                                <p>"This scientifically proven and patented child behaviour analysis changed my vision
+                                    of where I
+                                    saw my child’s education and life goals. I cannot recommend it more highly. If you
+                                    don’t do this
+                                    you are letting your child down."
+                                    <a href="{% url 'landing:testimonials' %}" style="font-size: 14px;">Read more</a>
+                                </p>
+
+                                <div class="testimonial-author">Dean Egan &mdash; Corporate Executive and father of
+                                    one
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div id="rightSect">
-                        <h2>Right Brain People</h2>
-                        <br>
+                    <div class="testimonial-table">
+                        <div class="testimonial-row">
+                            {#                            <div class="testimonial-image"></div>#}
+                            <div class="testimonial-message">
+                                <p>"I thought it was amazing just how accurate the personality described was to myself,
+                                    l do find
+                                    how the brain works very interesting and the various ways we all learn, l think this
+                                    would be a
+                                    valuable tool for parents, not only for the child’s development but also the way
+                                    parents
+                                    understand their children and the challenges all families have."
+                                    <a href="{% url 'landing:testimonials' %}" style="font-size: 14px;">Read more</a>
+                                </p>
 
-                        <p>
-                            On the contrary, right-brain people are dreamers who are led by intuition and creativity.
-                            Right brainers think deeply and may have high level of intelligence. Right brainers make
-                            great students of arts and social science. <br><br>Besides being more spontaneous than the
-                            conservative left-brainers, right brainers are intuitive and prefer to follow their own gut
-                            feelings when it comes to decision making.
-                        </p>
+                                <div class="testimonial-author">Carinne Wood &mdash; Director at Noah’s Ark Preschool
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div id="clear"></div>
+                    <div class="testimonial-table">
+                        <div class="testimonial-row">
+                            {#            <div class="testimonial-image">#}
+                            {#                <img src="{% static 'landing/img/aptitude/testimonial3.jpg' %}">#}
+                            {#            </div>#}
+                            <div class="testimonial-message">
+                                <p>"I found that the report is thorough, I feel that many of those are very accurate and
+                                    closely
+                                    resemble what I felt about myself."
+                                    <a href="{% url 'landing:testimonials' %}" style="font-size: 14px;">Read more</a>
+                                </p>
+
+                                <div class="testimonial-author">Nico Wanandy &mdash; PhD Reseacher and entrepreneur
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
