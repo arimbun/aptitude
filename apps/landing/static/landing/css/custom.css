@@ -286,6 +286,24 @@ img#email {
     background: url(../img/aptitude/idroid.png) 0 0;
 }
 
+img#facebook-small {
+    width: 20px;
+    height: 20px;
+    background: url(../img/aptitude/idroid-small.png) -34px 0;
+}
+
+img#twitter-small {
+    width: 20px;
+    height: 20px;
+    background: url(../img/aptitude/idroid-small.png) -67px 0;
+}
+
+img#email-small {
+    width: 20px;
+    height: 20px;
+    background: url(../img/aptitude/idroid-small.png) 0 0;
+}
+
 .overlay {
     display: none;
     /* place overlay on top of other elements */
