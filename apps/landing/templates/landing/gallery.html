@@ -1,0 +1,26 @@
+{% extends 'landing/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row" style="background-color:#ffffff">
+        <div class="container" style="padding-top:10px;">
+            <div class="row">
+                <div class="span10 offset1" id="content1">
+                    <div style="text-align: center">
+                        <img src="{% static 'landing/img/gallery/flyer1.jpg' %}"><br><br>
+                    </div>
+
+                    <div style="text-align: center">
+                        <img src="{% static 'landing/img/gallery/flyer3.jpg' %}"><br><br>
+                        <img src="{% static 'landing/img/gallery/flyer4.jpg' %}"><br><br>
+                    </div>
+
+                    <div style="text-align: center">
+                        <img src="{% static 'landing/img/gallery/flyer2.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

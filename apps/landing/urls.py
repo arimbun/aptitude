@@ -19,6 +19,10 @@ urlpatterns = patterns(
     url(r'^consulting$', views.consulting, name='consulting'),
     # eg: /dermatoglyphics
     url(r'^dermatoglyphics$', views.dermatoglyphics, name='dermatoglyphics'),
+    # eg: /report_content
+    url(r'^report_content$', views.report_content, name='report_content'),
+    # eg: /gallery
+    url(r'^gallery$', views.gallery, name='gallery'),
     # eg: /faq
     url(r'^faq$', views.faq, name='faq'),
     # eg: /toc

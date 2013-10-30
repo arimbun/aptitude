@@ -391,6 +391,7 @@ def franchising(request):
                               }
     )
 
+
 def faq(request):
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'FAQ'
@@ -406,6 +407,33 @@ def faq(request):
     )
 
 
+def report_content(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Report Content'
+
+    return render_to_response('landing/report_content.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'report_content',
+                                  'year': year,
+                              }
+    )
+
+def gallery(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'Gallery'
+
+    return render_to_response('landing/gallery.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'gallery',
+                                  'year': year,
+                              }
+    )
 
 def test_email(request):
     landing = Landing()
