@@ -39,9 +39,11 @@ body {
     line-height: 24px;
 }
 
+/******************
+ * [begin] Carousel
+ ******************/
 .carousel {
     margin-bottom: 0;
-
 }
 
 /* Carousel transition : Fade in, out */
@@ -64,6 +66,10 @@ body {
     opacity: 1;
     z-index: 1;
 }
+
+/******************
+ * [end] Carousel
+ ******************/
 
 table td {
     padding: 10px;
@@ -108,22 +114,18 @@ ul li {
     color: #ffffff;
 }
 
-.navbar .nav {
-    margin-left: 5px;
-}
-
 .navbar .nav>li {
     line-height: 30px;
-    /*letter-spacing: -0.3px;*/
+    letter-spacing: 1px;
 }
 
 .navbar .nav>li>a {
     color: #4C4032;
     background-color: #d9ceb2;
-    text-shadow: none;
+    /*text-shadow: none;*/
     font-size: 16px;
-    margin-bottom: 0;
     font-weight: bold;
+    padding: 10px 15px 10px 15px;
 }
 
 .navbar .nav>li>a:hover {
@@ -143,6 +145,8 @@ ul li {
 }
 
 .navbar-inner {
+    display: block;
+
     background-color: #7a6a53; /* background color will be black for all browsers */
     background-image: none;
     background-repeat: no-repeat;
@@ -158,10 +162,6 @@ ul li {
 .navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
     color: #4C4032;
     /*background-color: #d9ceb2;*/
-}
-
-.navbar .btn-navbar {
-    margin-top: 40px;
 }
 
 /*style.css*/
