@@ -71,7 +71,7 @@ def dermatoglyphics(request):
                                   'title': title,
                                   'keywords': keywords,
                                   'description': description,
-                                  'page': 'product',
+                                  'page': 'dermatoglyphics',
                                   'year': year,
                               }
     )
