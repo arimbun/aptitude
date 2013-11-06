@@ -96,6 +96,11 @@ ul li {
     margin: 15px 0 0 -45px;
 }
 
+#slogan {
+    font-style: italic;
+    color: #cb8101;
+}
+
 @font-face {
     font-family: titleFont;
     src: url('../fonts/HARNGTON.TTF');
@@ -112,6 +117,10 @@ ul li {
     top: -90px;
     left: 620px;
     color: #ffffff;
+}
+
+.navbar .nav-line-1 {
+    margin-top: -50px;
 }
 
 .navbar .nav>li {
