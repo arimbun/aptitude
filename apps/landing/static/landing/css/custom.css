@@ -98,7 +98,7 @@ ul li {
 
 #slogan {
     font-style: italic;
-    color: #cb8101;
+    color: #ba7000;
 }
 
 @font-face {
@@ -125,7 +125,7 @@ ul li {
 
 .navbar .nav>li {
     line-height: 30px;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
 }
 
 .navbar .nav>li>a {
