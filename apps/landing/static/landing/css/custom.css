@@ -123,6 +123,10 @@ ul li {
     margin-top: -50px;
 }
 
+.navbar .nav-line-2 {
+    font-size: 14px;
+}
+
 .navbar .nav>li {
     line-height: 30px;
     letter-spacing: -1px;

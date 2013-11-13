@@ -77,9 +77,13 @@
 
                     </div>
 
-                    <ul class="nav nav-line-1" style="margin-left: 60px;">
+                    <ul class="nav nav-line-1">
                         <li {% if page == 'index' %} class="active" {% endif %}><a
                                 href="{% url 'landing:index' %}">{{ _('HOME') }}</a></li>
+                        <li {% if page == 'contact' %} class="active" {% endif %}><a
+                                href="{% url 'landing:contact' %}">{{ _('CONTACT US') }}</a></li>
+                    </ul>
+                    <ul class="nav nav-line-2">
                         <li {% if page == 'dermatoglyphics' %} class="active" {% endif %}><a
                                 href="{% url 'landing:dermatoglyphics' %}">{{ _('DERMATOGLYPHICS') }}</a></li>
                         <li {% if page == 'testimonials' %} class="active" {% endif %}><a
@@ -90,16 +94,13 @@
                                 href="{% url 'landing:consulting' %}">{{ _('CONSULTING') }}</a></li>
                         <li {% if page == 'report_content' %} class="active" {% endif %}><a
                                 href="{% url 'landing:report_content' %}">{{ _('REPORT CONTENT') }}</a></li>
-                    </ul>
-                    <ul class="nav nav-line-2" style="margin-left: 225px;">
                         <li {% if page == 'faq' %} class="active" {% endif %}><a
                                 href="{% url 'landing:faq' %}">{{ _('FAQ') }}</a></li>
                         <li {% if page == 'gallery' %} class="active" {% endif %}><a
                                 href="{% url 'landing:gallery' %}">{{ _('GALLERY') }}</a></li>
                         <li {% if page == 'franchising' %} class="active" {% endif %}><a
                                 href="{% url 'landing:franchising' %}">{{ _('FRANCHISE') }}</a></li>
-                        <li {% if page == 'contact' %} class="active" {% endif %}><a
-                                href="{% url 'landing:contact' %}">{{ _('CONTACT US') }}</a></li>
+
                     </ul>
 
                 </div>
