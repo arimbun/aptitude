@@ -15,6 +15,8 @@ urlpatterns = patterns(
     # url(r'^book/failure$', views.book_failure, name='book_failure'),
     # # eg: /book/success
     # url(r'^book/success$', views.book_success, name='book_success'),
+    # eg: /about_us
+    url(r'^about_us', views.about_us, name='about_us'),
     # eg: /consulting
     url(r'^consulting$', views.consulting, name='consulting'),
     # eg: /dermatoglyphics

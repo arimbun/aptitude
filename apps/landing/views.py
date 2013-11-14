@@ -437,6 +437,19 @@ def gallery(request):
                               }
     )
 
+def about_us(request):
+    keywords, description, year = __init()
+    title = COMPANY_NAME + ' - ' + 'About Us'
+
+    return render_to_response('landing/about_us.html',
+                              {
+                                  'title': title,
+                                  'keywords': keywords,
+                                  'description': description,
+                                  'page': 'about_us',
+                                  'year': year,
+                              }
+    )
 
 def test_email(request):
     landing = Landing()

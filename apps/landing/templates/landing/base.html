@@ -88,9 +88,11 @@
 
                     <ul class="nav nav-line-1">
                         <li {% if page == 'index' %} class="active" {% endif %}><a
-                                href="{% url 'landing:index' %}">{{ _('HOME') }}</a></li>
+                                href="{% url 'landing:index' %}">{{ _('Home') }}</a></li>
                         <li {% if page == 'contact' %} class="active" {% endif %}><a
-                                href="{% url 'landing:contact' %}">{{ _('CONTACT US') }}</a></li>
+                                href="{% url 'landing:contact' %}">{{ _('Contact Us') }}</a></li>
+                        <li {% if page == 'about_us' %} class="active" {% endif %}><a
+                                href="{% url 'landing:about_us' %}">{{ _('About Us') }}</a></li>
                     </ul>
                     <ul class="nav nav-line-2">
                         <li {% if page == 'dermatoglyphics' %} class="active" {% endif %}><a
