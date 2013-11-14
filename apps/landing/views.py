@@ -13,8 +13,9 @@ from django.utils.datetime_safe import datetime
 from django import forms
 
 
-COMPANY_NAME = 'Aptitude World ANZ'
-META_KEYWORDS = ['Aptitude World AU', 'Aptitude World NZ', 'Aptitude World Australia', 'Aptitude World New Zealand']
+COMPANY_NAME = 'Aptitude World'
+META_KEYWORDS = ['Aptitude World', 'Aptitude World ANZ', 'Aptitude World AU', 'Aptitude World NZ',
+                 'Aptitude World Australia', 'Aptitude World New Zealand']
 
 
 class BookingForm(forms.Form):
@@ -421,6 +422,7 @@ def report_content(request):
                               }
     )
 
+
 def gallery(request):
     keywords, description, year = __init()
     title = COMPANY_NAME + ' - ' + 'Gallery'
@@ -434,6 +436,7 @@ def gallery(request):
                                   'year': year,
                               }
     )
+
 
 def test_email(request):
     landing = Landing()
