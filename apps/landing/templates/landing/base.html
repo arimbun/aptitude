@@ -61,22 +61,21 @@
                             <p><b>Call Now<br>1300 88 78 71</b></p>
                         </div>
                         <div style="text-align: right; width: 232px;">
-                            Like us on
-                            <a href="https://www.facebook.com/aptitude.worldau" target="_blank" style="">
+                            <a style="text-decoration: underline;" href="https://www.facebook.com/aptitudeworld.com.au" target="_blank" style="">Like us on
+                                Facebook</a>
+                            <a style="text-decoration: none;" href="https://www.facebook.com/aptitude.worldau" target="_blank" style="">
                                 <img id="facebook-small" src="{% static 'landing/img/aptitude/trans.png' %}"
                                      alt="facebook"/>
                             </a>
                             <br>
-
-                            Follow us on
-                            <a href="https://twitter.com/aptitudeworldau" target="_blank">
+                            <a style="text-decoration: underline;" href="https://twitter.com/aptitudeworldau" target="_blank">Follow us on Twitter</a>
+                            <a style="text-decoration: none;" href="https://twitter.com/aptitudeworldau" target="_blank">
                                 <img id="twitter-small" src="{% static 'landing/img/aptitude/trans.png' %}"
                                      alt="twitter"/>
                             </a>
                             <br>
-
-                            Email us
-                            <a href="mailto:info@aptitudeworld.com.au?cc=fenty@aptitudeworld.com.au">
+                            <a style="text-decoration: underline;" href="mailto:info@aptitudeworld.com.au?cc=fenty@aptitudeworld.com.au">Email us</a>
+                            <a style="text-decoration: none;" href="mailto:info@aptitudeworld.com.au?cc=fenty@aptitudeworld.com.au">
                                 <img id="email-small" src="{% static 'landing/img/aptitude/trans.png' %}"
                                      alt="email"/>
                             </a>
@@ -89,10 +88,10 @@
                     <ul class="nav nav-line-1">
                         <li {% if page == 'index' %} class="active" {% endif %}><a
                                 href="{% url 'landing:index' %}">{{ _('Home') }}</a></li>
-                        <li {% if page == 'contact' %} class="active" {% endif %}><a
-                                href="{% url 'landing:contact' %}">{{ _('Contact Us') }}</a></li>
                         <li {% if page == 'about_us' %} class="active" {% endif %}><a
                                 href="{% url 'landing:about_us' %}">{{ _('About Us') }}</a></li>
+                        <li {% if page == 'contact' %} class="active" {% endif %}><a
+                                href="{% url 'landing:contact' %}">{{ _('Contact Us') }}</a></li>
                     </ul>
                     <ul class="nav nav-line-2">
                         <li {% if page == 'dermatoglyphics' %} class="active" {% endif %}><a
