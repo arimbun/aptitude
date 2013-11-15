@@ -51,8 +51,9 @@ class ContactForm(forms.Form):
 
 
 def index(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Home'
+    description = 'Aptitude World helps children and adults to unleash their potential with proven scientific methodology.'
     return render_to_response('landing/index.html',
                               {
                                   'title': title,
@@ -65,8 +66,9 @@ def index(request):
 
 
 def dermatoglyphics(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Product'
+    description = 'The study of Dermatoglyphics (dermato=skin, glyphics=carvings) can be traced back to almost 200 years of research. This study has been proven with evidence in anthropology, genetics, neuroscience and statistics to decode human\'s innate ability (inborn characteristic).'
     return render_to_response('landing/dermatoglyphics.html',
                               {
                                   'title': title,
@@ -79,8 +81,9 @@ def dermatoglyphics(request):
 
 
 def consulting(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Consulting'
+    description = 'Aptitude World has a 3-Way Approach to discover the innate abilities and talent of an individual as illustrated in the below image.'
     return render_to_response('landing/consulting.html',
                               {
                                   'title': title,
@@ -95,7 +98,8 @@ def consulting(request):
 def book(request):
     # pydevd.settrace('localhost', port=8001, stdoutToServer=True, stderrToServer=True)
     booking_form = BookingForm()
-    keywords, description, year = __init()
+    keywords, year = __init()
+    description = 'To book an appointment with one of our consultants, please fill in the form below.'
     title = COMPANY_NAME + ' - ' + 'Book an Appointment'
 
     return render(request, 'landing/book.html',
@@ -112,8 +116,9 @@ def book(request):
 
 def contact(request):
     contact_form = ContactForm()
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Contact Us'
+    description = 'Give us a ring. We would love to chat with you.'
 
     return render(request, 'landing/contact/index.html',
                   {
@@ -128,8 +133,9 @@ def contact(request):
 
 
 def contact_success(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Contact Us'
+    description = 'Give us a ring. We would love to chat with you.'
 
     return render(request, 'landing/contact/success.html',
                   {
@@ -172,7 +178,8 @@ def submit_contact(request):
 def confirm_booking(request):
     # pydevd.settrace('localhost', port=8001, stdoutToServer=True, stderrToServer=True)
     if request.method == 'POST':
-        keywords, description, year = __init()
+        keywords, year = __init()
+        description = 'Please review your order below'
         title = COMPANY_NAME + ' - ' + 'Confirm Booking'
 
         booking_form = BookingForm(request.POST)
@@ -299,7 +306,8 @@ def book_success(request):
             deposit_paid=deposit_amount,
             total_owing=owing_amount)
 
-        keywords, description, year = __init()
+        keywords, year = __init()
+        description = ''
         title = COMPANY_NAME + ' - ' + 'Booking Successful'
         return render_to_response('landing/book/success.html',
                                   {
@@ -319,7 +327,8 @@ def book_success(request):
 
 
 def book_failure(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
+    description = ''
     title = COMPANY_NAME + ' - ' + 'Booking Failed'
     return render_to_response('landing/book/failure.html',
                               {
@@ -333,7 +342,8 @@ def book_failure(request):
 
 
 def toc(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
+    description = ''
     title = COMPANY_NAME + ' - ' + 'Terms and Conditions'
     return render_to_response('landing/toc.html',
                               {
@@ -347,7 +357,8 @@ def toc(request):
 
 
 def blog(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
+    description = ''
     title = COMPANY_NAME + ' - ' + 'Blog'
 
     blog_posts = Post.objects.all()
@@ -364,8 +375,9 @@ def blog(request):
 
 
 def testimonials(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Testimonials'
+    description = 'Here are a few lines that our happy customers have come back with and say about our services.'
 
     return render_to_response('landing/testimonials.html',
                               {
@@ -379,8 +391,9 @@ def testimonials(request):
 
 
 def franchising(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Franchising'
+    description = 'Join the global Aptitude World family! We welcome your interest for a franchise opportunity.'
 
     return render_to_response('landing/franchising.html',
                               {
@@ -394,8 +407,9 @@ def franchising(request):
 
 
 def faq(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'FAQ'
+    description = 'Your Frequently Asked Questions answered.'
 
     return render_to_response('landing/faq.html',
                               {
@@ -409,8 +423,9 @@ def faq(request):
 
 
 def report_content(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Report Content'
+    description = ''
 
     return render_to_response('landing/report_content.html',
                               {
@@ -424,8 +439,9 @@ def report_content(request):
 
 
 def gallery(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'Gallery'
+    description = ''
 
     return render_to_response('landing/gallery.html',
                               {
@@ -437,9 +453,11 @@ def gallery(request):
                               }
     )
 
+
 def about_us(request):
-    keywords, description, year = __init()
+    keywords, year = __init()
     title = COMPANY_NAME + ' - ' + 'About Us'
+    description = 'Aptitude World is a group of dynamic professionals coming from various fields whom being parents ourselves, are passionate about children development and believe in utilising modern technology to assist us in guiding our children to the best that they can be.'
 
     return render_to_response('landing/about_us.html',
                               {
@@ -451,6 +469,7 @@ def about_us(request):
                               }
     )
 
+
 def test_email(request):
     landing = Landing()
     landing.send_confirmation_email('arthur', 'rimbun', '0413751601', 'anggiarto@gmail.com', 'anggiarto@gmail.com',
@@ -460,6 +479,5 @@ def test_email(request):
 
 def __init():
     keywords = ','.join(META_KEYWORDS)
-    description = ','.join(META_KEYWORDS)
     year = datetime.now().year
-    return keywords, description, year
+    return keywords, year
